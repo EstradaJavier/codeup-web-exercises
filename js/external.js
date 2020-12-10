@@ -19,7 +19,7 @@ const littleMermaid = "Little Mermaid";
 const brotherBear    = "Brother Bear";
 const hercules       = "Hercules";
 const pricePerDay = 3.00;
-const tax = 6.25;
+const tax = 0.0625;
 
 let daysRented  = 0;
 // let costNumber1 = 0;
@@ -46,8 +46,9 @@ let costNumber3 = daysRentedLittleMermaid * pricePerDay;
 alert("You rented " + hercules + " for "+ daysRentedHercules + " days. So your total cost  for your rental is: $" + (daysRentedHercules * pricePerDay));
 
 let finalCost = (costNumber1 + costNumber2 + costNumber3);
-alert("The total cost for everything is: $" + finalCost);
-console.log("The total cost for everything is: $" + finalCost);
+
+alert("The total cost for everything with taxes is: $ " + (finalCost + (finalCost * tax)));
+console.log("The total cost for everything with taxes is: $" + (finalCost + (finalCost * tax)));
 
 // big bucks problem  (google, facebook, amazon)
 let googleHours = prompt("How many hours did you work for google?");
