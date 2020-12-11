@@ -21,13 +21,6 @@ const hercules       = "Hercules";
 const pricePerDay = 3.00;
 const tax = 0.0625;
 
-let daysRented  = 0;
-// let costNumber1 = 0;
-// let costNumber2 = 0;
-// let costNumber3 = 0;
-// let finalCost    = 0;
-
-
 let daysRentedLittleMermaid = prompt("How many days did you rent Little Mermaid for?");
 console.log("You rented: " + littleMermaid + " for: " + daysRentedLittleMermaid + " days");
 alert("You rented " + littleMermaid + " for "+ daysRentedLittleMermaid + " days. So your total cost  for your rental is: $" + (daysRentedLittleMermaid * pricePerDay));
@@ -47,8 +40,8 @@ alert("You rented " + hercules + " for "+ daysRentedHercules + " days. So your t
 
 let finalCost = (costNumber1 + costNumber2 + costNumber3);
 
-alert("The total cost for everything with taxes is: $ " + (finalCost + (finalCost * tax)));
-console.log("The total cost for everything with taxes is: $" + (finalCost + (finalCost * tax)));
+alert("The total cost for everything with taxes is: $ " + (finalCost + (finalCost * tax).toFixed(2)));
+console.log("The total cost for everything with taxes is: $" + (finalCost + (finalCost * tax).toFixed(2)));
 
 // big bucks problem  (google, facebook, amazon)
 let googleHours = prompt("How many hours did you work for google?");
@@ -65,3 +58,4 @@ let totalPay = (Number(googleHours)  *  Number(googlePay)) + (Number(amazonHours
 
 alert("Your total hours worked: " + totalHours);
 alert("Your total pay is: $" + totalPay);
+
