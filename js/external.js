@@ -59,3 +59,50 @@ let totalPay = (Number(googleHours)  *  Number(googlePay)) + (Number(amazonHours
 alert("Your total hours worked: " + totalHours);
 alert("Your total pay is: $" + totalPay);
 
+// student enrollment problem
+//   A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
+
+aleret("Are you enrolled in CODEUP?");
+
+let classSize    = prompt("What is the class size?");
+let classConflict = confirm('Are there any class conflicts?');
+let classConfirm  = (classSize < 17) && (classConflict === true);
+
+console.log("classConfirm");
+alert("Welcome to Luna. It is " + classConfirm + "!");
+
+// product offer problem
+//   A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
+//   Premium members do not need to buy a specific amount of products.
+
+let numberOfItems     = prompt("How many items will you be purchasing?");
+    numberOfItems     = parseInt(numberOfItems);
+let offerIsExpired    = false;
+let isCustomerPremium = false;
+
+let isOfferValid = (isCustomerPremium && !offerIsExpired) || ((numberOfItems >= 2) && (!offerIsExpired));
+alert("Offer is indeed valid! :" + isOfferValid);
+
+
+
+// Boolean problem
+//  Use the following code to follow the instructions below:
+let username = 'codeup';
+let password = 'notastrongpassword';
+
+
+//Create a variable that holds a boolean value for each of the following conditions:
+// the password must be at least 5 characters
+let isPasswordLenght = true;
+
+// the password must not include the username
+let nustNotIncludeUsername = true;
+
+// the username must be no more than 20 characters
+let userNameisLessThanTwentyCharacters = true;
+
+// neither the username or password can start or end with whitespace
+let userNameContainWhitespace = false;
+let passwordContainWhitespace = false;
+
+
