@@ -1,9 +1,12 @@
 // js file
 "use strict";
 
+
+
 // first problem
 console.log( "Hello from external JavaScript" );
 alert('Welcome to my Website!');
+
 
 // second problem
 let userResponce = prompt("What is your favorite color? ");
@@ -15,11 +18,11 @@ alert("Your age is: " + userAge);
 
 
 // movie rental problem
-const littleMermaid = "Little Mermaid";
+const littleMermaid  = "Little Mermaid";
 const brotherBear    = "Brother Bear";
 const hercules       = "Hercules";
-const pricePerDay = 3.00;
-const tax = 0.0625;
+const pricePerDay    = 3.00;
+const tax            = 0.0625;
 
 let daysRentedLittleMermaid = prompt("How many days did you rent Little Mermaid for?");
 console.log("You rented: " + littleMermaid + " for: " + daysRentedLittleMermaid + " days");
@@ -62,14 +65,14 @@ alert("Your total pay is: $" + totalPay);
 // student enrollment problem
 //   A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
 
-aleret("Are you enrolled in CODEUP?");
+confirm("Click OK if you are enrolled in CODEUP?");
 
 let classSize    = prompt("What is the class size?");
-let classConflict = confirm('Are there any class conflicts?');
+let classConflict = confirm('Click OK if there are any class conflicts?');
 let classConfirm  = (classSize < 17) && (classConflict === true);
 
 console.log("classConfirm");
-alert("Welcome to Luna. It is " + classConfirm + "!");
+alert("Welcome to Luna. You are all set. Good luck, and remember to push up everyday!");
 
 // product offer problem
 //   A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
