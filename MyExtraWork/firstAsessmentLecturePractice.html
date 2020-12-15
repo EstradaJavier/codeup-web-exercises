@@ -26,17 +26,25 @@
     // Write a function, isFive, that takes in an input and returns the boolean value true if the passed argument is
     // the number 5 or the string "5". Return false otherwise.
     function isFive(x) {
-        if (x == 5 || x == "5");{
+        if (x == 5 || x == "5");
         return true;
     };
 
     // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument
     // is shorter than 5 characters. Return false otherwise.
 
-    function isShortWorld(x) {
-        if (x < 5 ) {
-            return true;
+            // first define the fiunction
+            // rephrase the problem to make it more understandable
+            // what is the input and what type is it?
+            // what is the expected output and what type is it?
+            // write test cases (even before you solve it)
+
+
+    function isShortWorld(strInput) {
+            return strInput.length < 6;
     };
+    console.log(isShortWorld("hi"), false);
+        console.log(isShortWorld("hi eveyone"), false);
 
     // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed
     // arguments are the same length. Return false otherwise.
@@ -54,10 +62,31 @@
     // example input: getSmallerSegment("Codeup", 3)
     // example output: "cod"
 
-    function getSallerSegment (str1, num1) {
-        let lower = str1.toLowerCase();
-        return lower.substring(0, num1)
+    function getSmallerSegment(strInput, segmentLength) {
+        return strInput.substring(0, segmentLength); //string
     };
+
+    // test cases:
+    console.log(getSmallerSegment("Codeup", 3), "Cod");
+    console.log(getSmallerSegment("CODEUP", 3), "COD");
+    console.log(getSmallerSegment("Spider", 3), "Spi");
+    console.log(getSmallerSegment("123456", 3), "123");
+
+
+    // console.log(getSmallerSegment());
+
+    //use the given expected output as a test case:
+    // example input: getSmallerSegment("Codeup", 3)
+    // example output: "cod"
+
+    // This is how you will write an IIFE
+        (function() {
+
+        })();
+
+    (function() {
+
+    })();
 
 </script>
 </body>
