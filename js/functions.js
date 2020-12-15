@@ -102,6 +102,7 @@ var random = Math.floor((Math.random() * 3) + 1);
     calculateTip(0.25, 25.50);
     console.log(calculateTip(0.25, 25.50));
 
+
 /**
  * TODO: 6
  * Use prompt and alert in combination with your calculateTip function to
@@ -109,8 +110,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  * then display the dollar amount they should tip
  */
 
-    let tipPercentage = prompt("How much do you want to tip?");
+    let tipPercentage = prompt("How much do you want to tip?") / 100;
     let totalBill     = prompt("What is the total bill?");
+
     console.log("Total amount due: $" + calculateTip(tipPercentage, totalBill));
 
 
