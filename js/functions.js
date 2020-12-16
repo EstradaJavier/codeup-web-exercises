@@ -1,6 +1,7 @@
-alert('Welcome to my Website!');
+alert('Welcome to my functions.js');
 
 "use strict";
+alert("Hello from functions.js")
 
         // example of using a IFFE
         // (function () {
