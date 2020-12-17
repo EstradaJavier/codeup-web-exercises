@@ -101,25 +101,44 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-    // let luckyNumber =
-    // totalAmount     = prompt("What is the total bill?");
+    let discount;
+    let totalBill;
 
     function calculateTotal(luckyNumber, totalAmount) {
-        if (luckyNumber == 0) {
-            return "You do not have a discount";
-        } else if (luckyNumber === 1) {
-            return  (totalAmount * .1);
-        } else if (luckyNumber === 2) {
-            return (totalAmount * .25);
-        } else if (luckyNumber === 3) {
-            return  (totalAmount * .35);
-        } else if (luckyNumber === 4) {
-            return (totalAmount * .5);
-        } else if (luckyNumber === 5) {
-            return "Congratulations, you get everything for free";
-        } else {
-            return ("Sorry, but your lucky number did not come today. Check again tomorrow");
-        }
+        switch(luckyNumber) {
+            case 0:
+                totalBill = totalAmount;
+                alert("No discount for you today. Your total amount is: $" + totalBill.toFixed(2));
+                break;
+            case 1:
+                discount = .90;
+                totalBill = totalAmount * discount;
+                alert("You get a 10% discount today. Your total amount is: $" + totalBill.toFixed(2));
+                break;
+            case 2:
+                discount = .80;
+                totalBill = totalAmount * discount;
+                alert("You get a 20% discount today. Your total amount is: $" + totalBill.toFixed(2));
+                break;
+            case 3:
+                discount = .67;
+                totalBill = totalAmount * discount;
+                alert("You get a 33% discount today. Your total amount is: $" + totalBill.toFixed(2));
+                break;
+            case 4:
+                discount = .50;
+                totalBill = totalAmount * discount;
+                alert("You get a 50% discount today. Your total amount is: $" + totalBill.toFixed(2));
+                break;
+            case 5:
+                discount = 0;
+                totalBill = totalAmount * discount;
+                alert("You get a 100% discount today. Your total amount is: $" + totalBill.toFixed(2));
+                break;
+            default:
+                alert("You get nothing today!");
+                break;
+            }
     };
 
     console.log(calculateTotal(0, 100)); // returns 100
@@ -139,6 +158,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 
+
+
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -155,3 +176,18 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let numberEnteredByUser = confirm("Would you like enter a number?");
+let numberEnteredByUser = 100;
+
+if (numberEnteredByUser) {
+    let numberEnteredByUser = + prompt("Enter a number: ");
+    if (isNaN(numberEnteredByUser)) {
+        alert("Please enter a number! You etered " + numberEnteredByUser + "and this is not a number. Please try again);
+    } else {
+        (numberEnteredByUser % 2 === 0) ? alert("The number you entered is an EVEN number") : alert("You entered an ODD number");
+        (numberEnteredByUser >= 0) ? alert("You entered a POSITIVE number") : alert("You entered a NEGATIVE number");
+        alert("The number you entered  plus " +  oneHundread " is equal " + confirm("") : alert(numberEnteredByUser " +  numberEnteredByUser));
+    }
+} esle {
+    alert("You did not enter a number. You are such dissident!");
+};
