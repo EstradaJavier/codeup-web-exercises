@@ -20,13 +20,13 @@ alert ( "Hi! Javier's for_loops.js Page." );
     // 7 x 9 = 63
     // 7 x 10 = 70
 
-    function showMultiplicationTable() {
-        let i = 10;
-        while (i <= 10) {
-            console.log(num + " * " + i + " = " + (num * i));
-            i++;
-        }
-    }
+    // function showMultiplicationTable(num) {
+    //     let i = 1;
+    //     while (i <= 10) {
+    //         console.log ( num + " * " + i + " = " + (num * i) );
+    //         i++;
+    //     }
+    // };
 
 
 
@@ -38,6 +38,15 @@ alert ( "Hi! Javier's for_loops.js Page." );
         // 24 is even
         // 199 is odd
         // ...
+
+        // for (let i = 0; i < 10; i++) {
+            // let rondomNumber = Math.floor((Math.random() * 180) + 20);
+
+            let mathRandomNumber = Math.floor(Math.random() * 50) + 50;
+            // console.log(mathRandomNumber);
+            console.log("Here is an even number: "+ mathRandomNumber);
+        // };
+
 
 
     // Create a for loop that uses console.log to create the output shown below.
