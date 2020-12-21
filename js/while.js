@@ -1,4 +1,5 @@
 // js file
+"use strict"
 alert ( "Hi! Javier's while.js Page." );
 
     // While Loops
@@ -21,6 +22,12 @@ alert ( "Hi! Javier's while.js Page." );
         // 16384
         // 32768
         // 65536
+
+        let num = 2;
+        while(num <=  65536) {
+                console.log(num);
+                num = num * 2;
+        };
 
 
 
