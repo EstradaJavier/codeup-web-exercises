@@ -75,19 +75,105 @@
                  }
              };
 
+             const companies = ["Apple", "Google", "Facebook"];
+
+             companies.forEach(company => {
+             	console.log(company);
+             });
 
 
+            var dayOfTheWeek = prompt("What kind of pizza do you like?").toLowerCase();
+
+            switch(dayOfTheWeek) {
 
 
+            	case "monday":
+            		alert("Monday is though!");
+            		break;
+            	case "tuesday":
+            		alert("Yes! It's taco tuesday!");
+            		break;
+            	case "wednesday":
+            		alert("Just plain cheese? Okay...");
+            		break;
+            	case "thursday":
+            		alert("Is Thursday a lady's night out? Not sure any more.");
+            		break;
+            	case "friday":
+            		alert("It's TGIF!");
+            		break;
+            	case "saturday":
+            		alert("Sleep late Saturday.");
+            		break;
+            	case "sunday":
+            		alert("Yeah! Its almost Monday again.");
+            		break;
+            	default:
+            		alert("You did not enter a correct day. ==>(saturday, sunday, monday...Please try again!");
+            		break;
+            };
 
+console.log("");
 
+var numberToStopAt = 5;
 
+for (var i = 1; i < 100; i++) {
 
+    console.log('Loop counter is: ' + i);
 
+    if (i === numberToStopAt) {
+        console.log('We have reached the stopping point: break!');
+        // use the break keyword to exit from the while loop
+        break;
+    }
+};
 
+for (var i = 1; i < 50; ++i) {
+    if (i % 15 === 0) {
+     console.log("FizzBuzz " + "-- the value of:(i) is: " + i);
+    } else if (i % 3 === 0) {
+     console.log("Fizz " + "-- the value of:(i) is: " + i);
+    } else if (i % 5 === 0) {
+     console.log("Buzz " + "-- the value of:(i) is: " + i);
+    } else {
+     console.log(i);
+    }
+};
 
+var dayOfTheWeek = prompt("What kind of pizza do you like?").toLowerCase();
 
+var dayOfTheWeek = prompt("What kind of pizza do you like?").toLowerCase();
 
-        </script>
-    </body>
-</html>
+switch(dayOfTheWeek) {
+	case "monday":
+		alert("Monday is though!");
+		break;
+	case "tuesday":
+		alert("Yes! It's taco tuesday!");
+		break;
+	case "wednesday":
+		alert("Just plain cheese? Okay...");
+		break;
+	case "thursday":
+		alert("Is Thursday a lady's night out? Not sure any more.");
+		break;
+	case "friday":
+		alert("It's TGIF!");
+		break;
+	case "saturday":
+		alert("Sleep late Saturday.");
+		break;
+	case "sunday":
+		alert("Yeah! Its almost Monday again.");
+		break;
+	default:
+		alert("You did not enter a correct day. ==>(saturday, sunday, monday...Please try again!");
+		break;
+};
+
+(function (x) {
+    let iffeVar = "I am IIFE.";
+    return x;
+})();
+
+html
