@@ -3,77 +3,93 @@
         <meta charset="UTF-8">
         <title>Enter Title Here</title>
 
+
+        <!-- STYLESHEET  STARTS  HERE -->
+        <style>
+            body {
+                background-color: lightblue;
+            }
+
+            h1 {
+                color: blue;
+                text-align: center;
+                margin: 10;
+                border: 10;
+                padding: 10;
+            }
+        </style>
+
     </head>
     <body>
+        <h1>JavaFX525</h1>
 
 
-    <!-- STYLESHEET  STARTS  HERE -->
+    <!-- SCRIPT  STARTS  HERE -->
         <script>
 
+            // **********WHILE PRACTICE 1****************
+                     // !! make a loop to go from 20 to 50 with increments of ten !!
+
+                     var i = 20
+
+                     while (i = 50) {
+                         console.log('while loop iteration #' + i);
+                         i++;
+                     }
 
 
-             //**********WHILE PRACTICE 1****************
-             // // !! make a loop to go from 20 to 50 with increments of ten !!
-             //
-             // var i = 20
-             //
-             // while (i = 50) {
-             //     console.log('while loop iteration #' + i);
-             //     i++;
-             // }
-             //
-             //
-             // // //**********WHILE PRACTICE 2****************
-             // // // !! write a program that will keep running until the user clicks ok !!
-             // var i = 10;
-             //
-             // do {
-             //     confirm("click OK if you want this look to stop working");
-             //     console.log('while loop iteration #' + i);
-             //     i++;
-             // } while (i < 10);
+                     // //**********WHILE PRACTICE 2****************
+                     // // !! write a program that will keep running until the user clicks ok !!
+                     var i = 10;
+
+                     do {
+                         confirm("click OK if you want this look to stop working");
+                         console.log('while loop iteration #' + i);
+                         i++;
+                     } while (i < 10);
 
 
-             // //**********WHILE PRACTICE 3****************
-             // //create a function which puts on a coat if it's cold outside
-             // //use a while loop
-             //  // pure function
-             //
-             // var putCoatOn = false;
-             // function getHot(temp) {
-             //     if (putcoatOn = false) {
-             //         promt("It's cold outside! Would you like to put on a coat?");
-             //         let temp == true;
-             //     }
-             // }
+                     //**********WHILE PRACTICE 3****************
+                     //create a function which puts on a coat if it's cold outside
+                     //use a while loop
+                      // pure function
 
-             // //Create a function that makes your $100k Tesla speed until the police are looking
-            // let x = true;
-            //
-            //  function isSpeeding(x) {
-            //      while (x) {
-            //          let x = true;
-            //          x = confirm('You are going too fast, stop speeding?');
-            //          alert("Thank you for not speeding!")
-            //          while (x) {
-            //              alert("You are so going to get a fine of $1,000.00")
-            //              return x = false;
-            //          }
-            //          return x = true;
-            //      }
-            //  }
+                     // var putCoatOn = false;
+                     // function getHot(temp) {
+                     //     if (putcoatOn = false) {
+                     //         promt("It's cold outside! Would you like to put on a coat?");
+                     //         let temp == true;
+                     //     }
+                     // }
 
-             for (var i = 1; i < 50; ++i) {
-                 if (i % 15 === 0) {
-                     console.log("FizzBuzz " + "-- the value of:(i) is: " + i);
-                 } else if (i % 3 === 0) {
-                     console.log("Fizz " + "-- the value of:(i) is: " + i);
-                 } else if (i % 5 === 0) {
-                     console.log("Buzz " + "-- the value of:(i) is: " + i);
-                 } else {
-                     console.log(i);
-                 }
-             };
+                     //Create a function that makes your $100k Tesla speed until the police are looking
+                    let x = true;
+
+                     function isSpeeding(x) {
+                         while (x) {
+                             let x = true;
+                             x = confirm('You are going too fast, stop speeding?');
+                             alert("Thank you for not speeding!")
+                             while (x) {
+                                 alert("You are so going to get a fine of $1,000.00")
+                                 return x = false;
+                             }
+                             return x = true;
+                         }
+                     }
+
+                     for (var i = 1; i < 50; ++i) {
+                         if (i % 15 === 0) {
+                             console.log("FizzBuzz " + "-- the value of:(i) is: " + i);
+                         } else if (i % 3 === 0) {
+                             console.log("Fizz " + "-- the value of:(i) is: " + i);
+                         } else if (i % 5 === 0) {
+                             console.log("Buzz " + "-- the value of:(i) is: " + i);
+                         } else {
+                             console.log(i);
+                         }
+                     };
+            // ********** END OF WHILE PRACTICE****************
 
              const companies = ["Apple", "Google", "Facebook"];
 
@@ -82,98 +98,62 @@
              });
 
 
-            var dayOfTheWeek = prompt("What kind of pizza do you like?").toLowerCase();
+            var numberToStopAt = 10;
 
-            switch(dayOfTheWeek) {
+            for (var i = 1; i < 100; i++) {
 
+                console.log('Loop counter is: ' + i);
 
-            	case "monday":
-            		alert("Monday is though!");
-            		break;
-            	case "tuesday":
-            		alert("Yes! It's taco tuesday!");
-            		break;
-            	case "wednesday":
-            		alert("Just plain cheese? Okay...");
-            		break;
-            	case "thursday":
-            		alert("Is Thursday a lady's night out? Not sure any more.");
-            		break;
-            	case "friday":
-            		alert("It's TGIF!");
-            		break;
-            	case "saturday":
-            		alert("Sleep late Saturday.");
-            		break;
-            	case "sunday":
-            		alert("Yeah! Its almost Monday again.");
-            		break;
-            	default:
-            		alert("You did not enter a correct day. ==>(saturday, sunday, monday...Please try again!");
-            		break;
+                if (i === numberToStopAt) {
+                    console.log("We encountered a predetermined 'break' at\nreiteration number : " + numberToStopAt);
+                    // use the break keyword to exit from the while loop
+                    break;
+                }
             };
 
-console.log("");
+            // for (var i = 1; i < 50; ++i) {
+            //     if (i % 15 === 0) {
+            //      console.log("FizzBuzz " + "-- the value of:(i) is: " + i);
+            //     } else if (i % 3 === 0) {
+            //      console.log("Fizz " + "-- the value of:(i) is: " + i);
+            //     } else if (i % 5 === 0) {
+            //      console.log("Buzz " + "-- the value of:(i) is: " + i);
+            //     } else {
+            //      console.log(i);
+            //     }
+            // };
 
-var numberToStopAt = 5;
+            var dayOfTheWeek = prompt("Please enter the day of the week!").toLowerCase();
 
-for (var i = 1; i < 100; i++) {
 
-    console.log('Loop counter is: ' + i);
+            switch(dayOfTheWeek) {
+                case "monday":
+                    alert("Monday is though!");
+                    break;
+                case "tuesday":
+                    alert("Yes! It's taco tuesday!");
+                    break;
+                case "wednesday":
+                    alert("Just plain cheese? Okay...");
+                    break;
+                case "thursday":
+                    alert("Is Thursday a lady's night out? Not sure any more.");
+                    break;
+                case "friday":
+                    alert("It's TGIF!");
+                    break;
+                case "saturday":
+                    alert("Sleep late Saturday.");
+                    break;
+                case "sunday":
+                    alert("Yeah! Its almost Monday again.");
+                    break;
+                default:
+                    console.error("You did not enter a correct day.\nExample ==>(saturday, sunday, monday...\nRefresh this page to try again!");
+                    break;
+            };
 
-    if (i === numberToStopAt) {
-        console.log('We have reached the stopping point: break!');
-        // use the break keyword to exit from the while loop
-        break;
-    }
-};
+        </script>
+    </body>
 
-for (var i = 1; i < 50; ++i) {
-    if (i % 15 === 0) {
-     console.log("FizzBuzz " + "-- the value of:(i) is: " + i);
-    } else if (i % 3 === 0) {
-     console.log("Fizz " + "-- the value of:(i) is: " + i);
-    } else if (i % 5 === 0) {
-     console.log("Buzz " + "-- the value of:(i) is: " + i);
-    } else {
-     console.log(i);
-    }
-};
-
-var dayOfTheWeek = prompt("What kind of pizza do you like?").toLowerCase();
-
-var dayOfTheWeek = prompt("What kind of pizza do you like?").toLowerCase();
-
-switch(dayOfTheWeek) {
-	case "monday":
-		alert("Monday is though!");
-		break;
-	case "tuesday":
-		alert("Yes! It's taco tuesday!");
-		break;
-	case "wednesday":
-		alert("Just plain cheese? Okay...");
-		break;
-	case "thursday":
-		alert("Is Thursday a lady's night out? Not sure any more.");
-		break;
-	case "friday":
-		alert("It's TGIF!");
-		break;
-	case "saturday":
-		alert("Sleep late Saturday.");
-		break;
-	case "sunday":
-		alert("Yeah! Its almost Monday again.");
-		break;
-	default:
-		alert("You did not enter a correct day. ==>(saturday, sunday, monday...Please try again!");
-		break;
-};
-
-(function (x) {
-    let iffeVar = "I am IIFE.";
-    return x;
-})();
-
-html
+</html>
