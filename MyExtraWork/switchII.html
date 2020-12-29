@@ -1,16 +1,29 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Enter Title Here</title>
-            
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Title Here</title>
+
     <!----- STYLESHEET  STARTS  HERE ----->
-		<style src="jcss/external.css"></style>
-    </head>
-    <body>
-    
-    
-    
-     <!----- JAVIASCRIPT STARTS  HERE ------->    
-        <script src="js/external.js"></script>
-    </body>
+    <style src="jcss/external.css"></style>
+</head>
+<body>
+
+
+<!----- JAVIASCRIPT STARTS  HERE ------->
+    <script>
+        for (var i = 1; i < 50; ++i) {
+            if (i % 15 === 0) {
+             console.log("FizzBuzz " + "-- the value of:(i) is: " + i);
+            } else if (i % 3 === 0) {
+             console.log("Fizz " + "-- the value of:(i) is: " + i);
+            } else if (i % 5 === 0) {
+             console.log("Buzz " + "-- the value of:(i) is: " + i);
+            } else {
+             console.log(i);
+            }
+        };
+
+
+    </script>
+</body>
 </html>
