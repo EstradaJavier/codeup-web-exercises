@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Problems from Zoom</title>
+    </head>
+    <body>
+        <h1>III Problems</h1>
+
+        <script>
+            // **********WHILE PRACTICE 1****************
+            // !! make a loop to go from 20 to 50 with increments of ten !!
+            // using an IIFE
+
+            // let i = 20;
+            //
+            // while (i <= 50) {
+            //     console.log ( 'while loop iteration #' + i );
+            //     i = i + 10;
+            // };
+
+
+            // **********WHILE PRACTICE 2****************
+            // !! write a program that will keep running until the user clicks ok !!
+
+            // let x = 1;
+            // while (x < 2) {
+            //     console.log ( 'while loop iteration #' + x );
+            //     confirm("Do you want to continue the loop?");
+            //     x++;
+            // }
+
+            // **********WHILE PRACTICE 3****************
+            //  create a function which puts on a coat if it's cold outside
+            //  use a while loop
+
+            let temperature = prompt("What is the temperature outside?")
+
+            switch (true) {
+                case temperature > 82:
+                    console.log ( "Going to the pool today" );
+                    break;
+                case temperature >= 81:
+                    console.log ( "No more pool days for me!" );
+                    break;
+                case temperature >= 60:
+                    console.log ( "Chill in the air tonight" );
+                    break;
+                case temperature >= 50:
+                    console.log ( "Time to put that cote on dude." );
+                    break;
+                case temperature >= 40:
+                    console.log ( "This feel cold to me!" );
+                    break;
+                case temperature >= 30:
+                    console.log ( "Freezing with a chance of snow today!" );
+                    break;
+                case temperature >= 20:
+                    console.log ( "Start of the Ice age!" );
+                    break;
+                default:
+                    console.log ( "Its so cold out side!!!  This END of us..." );
+                };
+
+            let grade = prompt ("What grade did you get?")
+
+            switch (true) {
+                // If score is 90 or greater
+                case grade >= 90:
+                    console.log("You get a: A");
+                    break;
+                // If score is 80 or greater
+                case grade >= 80:
+                    console.log("You get a: B");
+                    break;
+                // If score is 70 or greater
+                case grade >= 70:
+                    console.log("You get a: C");
+                    break;
+                // If score is 60 or greater
+                case grade >= 60:
+                    console.log("You get a: D");
+                    break;
+                // Anything 59 or below is failing
+                default:
+                    console.log("F");
+            }
+        </script>
+    </body>
+</html>
