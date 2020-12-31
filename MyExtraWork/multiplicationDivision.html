@@ -1,16 +1,25 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Enter Title Here</title>
-            
-    <!----- STYLESHEET  STARTS  HERE ----->
-		<style src="jcss/external.css"></style>
+        <title>Simple Calculator</title>
+
+        <!----- STYLESHEET  STARTS  HERE ----->
+        <style src="jcss/external.css"></style>
     </head>
     <body>
-    
-    
-    
-     <!----- JAVIASCRIPT STARTS  HERE ------->    
-        <script src="js/external.js"></script>
+    <form>
+        1st Number : <input type="text" id="firstNumber" /><br>
+        2nd Number: <input type="text" id="secondNumber" /><br>
+        <input type="button" onClick="multiplyBy()" Value="Multiply" />
+        <input type="button" onClick="divideBy()" Value="Divide" />
+        <input type="button" onClick="add()" Value="add" />
+        <input type="button" onClick="subtract()" Value="Subtract" />
+    </form>
+    <p>The Result is :
+        <span id = "result"></span>
+    </p>
+
+    <!----- JAVIASCRIPT STARTS  HERE ------->
+    <script src="js/multiplicationDivision.js"></script>
     </body>
 </html>
