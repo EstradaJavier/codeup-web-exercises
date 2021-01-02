@@ -1,93 +1,93 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Enter Title Here</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Enter Title Here</title>
+
+
+        <!-- STYLESHEET  STARTS  HERE -->
+        <style>
+
+        </style>
+    </head>
+    <body>
 
 
     <!-- STYLESHEET  STARTS  HERE -->
-    <style>
+    <script>
+        "use strict"
 
-    </style>
-</head>
-<body>
+        // Write a function, returnFive, that returns the number five. No inputs should be defined.
 
+        function returnFive() {
+            let x = 5;
+            return x;
+        }
 
-<!-- STYLESHEET  STARTS  HERE -->
-<script>
-    "use strict"
+        // Write a function, isFive, that takes in an input and returns the boolean value true if the passed argument is
+        // the number 5 or the string "5". Return false otherwise.
+        function isFive(x) {
+            if (x == 5 || x == "5");
+            return true;
+        };
 
-    // Write a function, returnFive, that returns the number five. No inputs should be defined.
+        // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument
+        // is shorter than 5 characters. Return false otherwise.
 
-    function returnFive() {
-        let x = 5;
-        return x;
-    }
-
-    // Write a function, isFive, that takes in an input and returns the boolean value true if the passed argument is
-    // the number 5 or the string "5". Return false otherwise.
-    function isFive(x) {
-        if (x == 5 || x == "5");
-        return true;
-    };
-
-    // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument
-    // is shorter than 5 characters. Return false otherwise.
-
-            // first define the fiunction
-            // rephrase the problem to make it more understandable
-            // what is the input and what type is it?
-            // what is the expected output and what type is it?
-            // write test cases (even before you solve it)
+                // first define the fiunction
+                // rephrase the problem to make it more understandable
+                // what is the input and what type is it?
+                // what is the expected output and what type is it?
+                // write test cases (even before you solve it)
 
 
-    function isShortWorld(strInput) {
-            return strInput.length < 6;
-    };
-    console.log(isShortWorld("hi"), false);
-        console.log(isShortWorld("hi eveyone"), false);
+        function isShortWorld(strInput) {
+                return strInput.length < 6;
+        };
+        console.log(isShortWorld("hi"), false);
+            console.log(isShortWorld("hi eveyone"), false);
 
-    // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed
-    // arguments are the same length. Return false otherwise.
+        // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed
+        // arguments are the same length. Return false otherwise.
 
-    function isSameLength(str1, str2) {
-            if (str1.length == 5 && str2.length == 5) {
-                return true;
-            }
-    };
-
-
-    // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a
-    // substring of the first argument that is as many characters long as the second argument in lowercase.
-
-    // example input: getSmallerSegment("Codeup", 3)
-    // example output: "cod"
-
-    function getSmallerSegment(strInput, segmentLength) {
-        return strInput.substring(0, segmentLength); //string
-    };
-
-    // test cases:
-    console.log(getSmallerSegment("Codeup", 3), "Cod");
-    console.log(getSmallerSegment("CODEUP", 3), "COD");
-    console.log(getSmallerSegment("Spider", 3), "Spi");
-    console.log(getSmallerSegment("123456", 3), "123");
+        function isSameLength(str1, str2) {
+                if (str1.length == 5 && str2.length == 5) {
+                    return true;
+                }
+        };
 
 
-    // console.log(getSmallerSegment());
+        // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a
+        // substring of the first argument that is as many characters long as the second argument in lowercase.
 
-    //use the given expected output as a test case:
-    // example input: getSmallerSegment("Codeup", 3)
-    // example output: "cod"
+        // example input: getSmallerSegment("Codeup", 3)
+        // example output: "cod"
 
-    // This is how you will write an IIFE
+        function getSmallerSegment(strInput, segmentLength) {
+            return strInput.substring(0, segmentLength); //string
+        };
+
+        // test cases:
+        console.log(getSmallerSegment("Codeup", 3), "Cod");
+        console.log(getSmallerSegment("CODEUP", 3), "COD");
+        console.log(getSmallerSegment("Spider", 3), "Spi");
+        console.log(getSmallerSegment("123456", 3), "123");
+
+
+        // console.log(getSmallerSegment());
+
+        //use the given expected output as a test case:
+        // example input: getSmallerSegment("Codeup", 3)
+        // example output: "cod"
+
+        // This is how you will write an IIFE
+            (function() {
+
+            })();
+
         (function() {
 
         })();
 
-    (function() {
-
-    })();
-
-</script>
-</body>
+    </script>
+    </body>
 </html>
