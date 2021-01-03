@@ -34,9 +34,9 @@ alert ( "Hi! Javier's for_loops.js Page." );
                 let i = 1;
                 while (i <= 1) {
                     if (mathRandomNumber % 2 == 0) {
-                        console.log ( mathRandomNumber + " EVEN" );
+                        console.log ( `${mathRandomNumber} EVEN` );
                     } else {
-                        console.log ( mathRandomNumber + " ODD" );
+                        console.log ( `${mathRandomNumber} ODD` );
                     }i++;
 
                 }i++;
@@ -59,13 +59,60 @@ alert ( "Hi! Javier's for_loops.js Page." );
         // 7777777
         // 88888888
         // 999999999
+// console.log("Statrt of my foor loop 1 22 33 4444);
+                for( let i =0; i< 10; i++){
+                    // console.log("#########" + i);
 
-            // for (let i = 1; i < 55555; i++) {
-            //
-            //     console.log("This NUMBER: " + i);
-            //     if i < (55555) + (1) break;
-            // };
+                    if (i === 1) {
+                        console.log("First number ###: " + i);
+                    } else if (i === 2) {
+                        console.log("First number ###: 2" + i);
+                    }else if (i === 3) {
+                        console.log("First number ###: 33" + i);
+                    } else if (i === 4) {
+                        console.log("First number ###: 444" + i);
+                    } else if (i === 5) {
+                        console.log("First number ###: 5555" + i);
+                    } else if (i === 6) {
+                        console.log("First number ###: 66666" + i);
+                    } else if (i === 7) {
+                        console.log("First number ###: 777777" + i);
+                    } else if (i === 8) {
+                        console.log("First number ###: 8888888" + i);
+                    } else if (i === 9) {
+                        console.log ( "First number ###: 99999999" + i );
+                    } else {
+                        console.log("All Done!")
+                    }
+                }
 
+
+//             for (let i = 1; i < 10; i++) {
+//                 console.log("First number ### 1 : " + i);
+//
+//                 // if (i = 1) {
+//                 //     console.log("First number ###: 1" + i);
+//                 // } else if (i = 2) {
+//                 //     console.log("First number ###: 2" + i);
+//                 // }else if (i = 3) {
+//                 //     console.log("First number ###: 33" + i);
+//                 // } else if (i = 4) {
+//                 //     console.log("First number ###: 444" + i);
+//                 // } else if (i = 5) {
+//                 //     console.log("First number ###: 5555" + i);
+//                 // } else if (i = 6) {
+//                 //     console.log("First number ###: 66666" + i);
+//                 // } else if (i = 7) {
+//                 //     console.log("First number ###: 777777" + i);
+//                 // } else if (i = 8) {
+//                 //     console.log("First number ###: 8888888" + i);
+//                 // } else if (i = 9) {
+//                 //     console.log ( "First number ###: 99999999" + i );
+//                 // } esle {
+//                 //     console.log("All Done!")
+//                 // }
+//             };
+// console.log("End of my foor loop 1 22 33 4444);
 
     // Create a for loop that uses console.log to create the output shown below.
         // 100
@@ -92,7 +139,7 @@ alert ( "Hi! Javier's for_loops.js Page." );
             while (x > 0) {
                 x = x - 5;
                 if (x === 5) continue;
-                console.log("Decrementing from 100 to 0 by 5 each time! ==> " + x);
+                console.log(`Decrementing from 100 to 0 by 5 each time! ==> ${x}`);
             };
 
 
