@@ -86,6 +86,27 @@ alert ( "Hi! Javier's for_loops.js Page." );
                     }
                 }
 
+                const arrayName = ["Apple", "Google", "Facebook"];
+
+                arrayName.forEach(loopIterator => {
+                	console.log(company);
+                });
+                const array1 = ['a', 'b', 'c', "d", [2, 3, 45, 7]];
+
+                array1.forEach ( element => console.log ( element ) );
+
+                > // "a"
+                > // "b"
+                > // "c"
+                > // "d"
+                > // Array [2, 3, 45, 7]
+
+
+
+
+
+
+
 
 //             for (let i = 1; i < 10; i++) {
 //                 console.log("First number ### 1 : " + i);
