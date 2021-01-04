@@ -22,6 +22,7 @@ alert ( "Hi! Javier's JS Page." );
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
     console.log(planets);
+    planets.
 
     console.log('Adding "Pluto" to the end of the planets array.');
     console.log(planets);
