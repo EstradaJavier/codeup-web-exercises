@@ -13,16 +13,20 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-        console.log("names.length");
+        console.log(names.length);
 
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-        for (let i = 0; i < names.length; i++) {
-            console.log("Hello to my group cohort: " + names[i]);
-        };
+        // for (let i = 0; i < names.length; i++) {
+        //     console.log("Hello to my group cohort: " + names[i]);
+        // };
+        console.log(names[0]);
+        console.log(names[1]);
+        console.log(names[2]);
+        console.log(names[3]);
 
 
     /**
@@ -30,11 +34,27 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
+        for (let i = 0; i < names.length; i++) {
+            console.log("Hello to my group cohort: " + names[i]);
+        };
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+    names.forEach(friend => console.log (friend));
+
+
+    // const array1 = ['a', 'b', 'c', "d", [2, 3, 45, 7]];
+    //
+    // array1.forEach ( element => console.log ( element ) );
+
+// > ////  "Output produce by forEach loop"  ////
+// > // "a"
+// > // "b"
+// > // "c"
+// > // "d"
+// > // Array [2, 3, 45, 7]
 
     /**
      * TODO:
@@ -49,5 +69,22 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+    function first(x) {
+            console.log(x[0]);
+    };
+    first(names);
+    // console.log(first(names));
+
+    function second(x) {
+          console.log(x[1]);
+    };
+      second(names);
+
+    function last(x) {
+          console.log(x[x.length-1]);
+    };
+    last(names);
+
 
 })();
