@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Title Here</title>
+
+    <!----- STYLESHEET  STARTS  HERE ----->
+    <style src="jcss/external.css"></style>
+</head>
+<body>
+<!--exercise problems # 1-->
+
+<!--Create a few beverage objects and assign values to each object for the following properties:-->
+<!-- - brandName-->
+<!-- - type-->
+<!-- - volumeInLiters-->
+<!-- - priceInCents-->
+<!-- - expirationDate-->
+<!-- - datesOfPreviousSips (use an array of strings)-->
+<!-- - isOpen-->
+<!--Define your objects using both literal syntax to create all properties and values -->
+<!--at once and also try defining empty objects and assign property values in separate -->
+<!--statements using the dot notation.-->
+
+// -- Mini Exercise 2
+
+<!--var users = [-->
+<!--{-->
+<!--givenName: 'Sam',-->
+<!--age: 21-->
+<!--},-->
+<!--{-->
+<!--givenName: 'Cathy',-->
+<!--age: 34-->
+<!--},-->
+<!--{-->
+<!--givenName: 'Karen',-->
+<!--age: 43-->
+<!--}-->
+<!--];-->
+<!--/*-->
+<!--1. Log the names of all users in a single console log separated by spaces. // output = "Sam Cathy Karen"-->
+<!--2. Change the names of all users to "John Doe"-->
+<!--3. Increase the current age of all users by 1-->
+
+<!--Can you accomplish each step using iteration?-->
+<!--*/-->
+<!----- JAVIASCRIPT STARTS  HERE ------->
+<script>
+    <!--exercise solutions # 1-->
+        // ///// dynamic object /////
+        //     var beverage = {};
+        //         beverage.make = "coke";
+        //         beverage.type = "Soft Drink";
+        //         beverage.volumeInLiters = 2;
+        //         beverage.priceInCents = 150.00;
+        //         beverage.expirationDate = "6/6/2022";
+        //         beverage.datesOfPreviousSips = ["6/11/2020", "6/12/2020"];
+        //         beverage.isOpen = false;
+        // console.log(beverage);
+        //
+    <!--exercise solutions # 1-->
+        // /// static object /////
+        // var beverage2 = {
+        //     make2: "coke";
+        //     type2: "Soft Drink";
+        //     volumeInLiters2: 2;
+        //     priceInCents2:   150.00;
+        //     expirationDate2: "6/6/2022";
+        //         datesOfPreviousSips2: ["06/11/2020", "06/12/2020"],
+        //     isOpen: false;
+        //     };
+        //
+        // console.log("beverage2");
+
+    <!--exercise solutions # 2-->
+    var users = [
+        {
+            givenName: 'Sam',
+            age: 21
+        },
+        {
+            givenName: 'Cathy',
+            age: 34
+        },
+        {
+            givenName: 'Karen',
+            age: 43
+        }
+    ];
+
+    /*
+      1. Log the names of all users in a single console log separated by spaces.
+                // output = "Sam Cathy Karen"
+    */
+    // for(let i = 0; i < users.length; i += 1) {
+    //     console.log(users[i].givenName)
+    // }
+
+    users.forEach(function(user)){
+        user.givenName = "John Doe"
+    }
+
+
+    /* 2. Change the names of all users to "John Doe" */
+
+    console.log(users);
+
+   //
+   //  /* 3. Increase the current age of all users by 1 */
+   //  for(let i = 0; i < users.length; i += 1) {
+   //      console.log(users[i].givenName)
+   //  }
+   //
+   //
+   //  /* Can you accomplish each step using iteration?
+   // */
+   //  for(let i = 0; i < users.length; i += 1) {
+   //      console.log(users[i].givenName)
+   //  }
+
+    <!--exercise solutions # 3-->
+        // - Mini Exercise 3
+        // Create a dog object...
+        // The dog object should have properties for:
+        // breed (string),
+        //     weightInPounds (number),
+        //     age (number),
+        //     color (string),
+        //     canBreed (boolean),
+        //     shotRecords (array of objects with properties for date and typeOfShot)
+        // The dog object should have methods to:
+        //     bark() - will console.log “Woof!”
+        // getOlder() - will increase age by 1
+        // disableBreeding() - will set canBreed to false
+        // vaccinate(nameOfVaccination) - takes in an argument for the name of
+        // the vaccination and adds a new shot with the current date to the shotRecords array
+
+        var beverage = {};
+            beverage.make = "coke";
+            beverage.type = "Soft Drink";
+            beverage.volumeInLiters = 2;
+            beverage.priceInCents = 150.00;
+            beverage.expirationDate = "6/6/2022";
+            beverage.datesOfPreviousSips = ["6/11/2020", "6/12/2020"];
+            beverage.isOpen = false;
+    console.log(beverage);
+
+</script>
+</body>
+</html>
