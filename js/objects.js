@@ -33,8 +33,9 @@ alert ( "Hi! Javier's JS Page." );
     };
     console.log(person.sayHello());
 
-    // console.log(person);
-    // console.log(person.name);
+    console.log(person);
+    console.log(person.firstName);
+    console.log(person.lastName);
     // console.log(person.name[0]);
     // console.log(person.age);
     // console.log(person.interests[1]);
@@ -130,31 +131,3 @@ alert ( "Hi! Javier's JS Page." );
     }
 
 })();
-
-// var cars = [
-//     {
-//         make: "Toyota",
-//         model: "Camry",
-//         features: ["Automatic Windows", "Bluetooth Connectivity", "GPS Navigation"],
-//         owner: {
-//             name: "Jane Doe",
-//             age: 30
-//         }
-//     },
-//     {
-//         make: "Honda",
-//         model: "Accord",
-//         features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
-//         owner: {
-//             name: "John Doe",
-//             age: 31
-//         }
-//     }
-// ];
-//
-// console.log("Here are all the features of all the cars:");
-// cars.forEach(function(car) {
-//     car.features.forEach(function(feature) {
-//         console.log(feature);
-//     });
-// });
