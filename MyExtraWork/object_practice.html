@@ -66,27 +66,27 @@
         //     volumeInLiters2: 2;
         //     priceInCents2:   150.00;
         //     expirationDate2: "6/6/2022";
-        //         datesOfPreviousSips2: ["06/11/2020", "06/12/2020"],
+        //     datesOfPreviousSips2: ["06/11/2020", "06/12/2020"],
         //     isOpen: false;
         //     };
         //
         // console.log("beverage2");
 
     <!--exercise solutions # 2-->
-    var users = [
-        {
-            givenName: 'Sam',
-            age: 21
-        },
-        {
-            givenName: 'Cathy',
-            age: 34
-        },
-        {
-            givenName: 'Karen',
-            age: 43
-        }
-    ];
+    // var users = [
+    //     {
+    //         givenName: 'Sam',
+    //         age: 21
+    //     },
+    //     {
+    //         givenName: 'Cathy',
+    //         age: 34
+    //     },
+    //     {
+    //         givenName: 'Karen',
+    //         age: 43
+    //     }
+    // ];
 
     /*
       1. Log the names of all users in a single console log separated by spaces.
@@ -96,14 +96,14 @@
     //     console.log(users[i].givenName)
     // }
 
-    users.forEach(function(user)){
-        user.givenName = "John Doe"
-    }
+    // users.forEach(function(user)){
+    //     user.givenName = "John Doe"
+    // }
 
 
     /* 2. Change the names of all users to "John Doe" */
 
-    console.log(users);
+    // console.log(users);
 
    //
    //  /* 3. Increase the current age of all users by 1 */
@@ -122,28 +122,64 @@
         // - Mini Exercise 3
         // Create a dog object...
         // The dog object should have properties for:
-        // breed (string),
-        //     weightInPounds (number),
-        //     age (number),
-        //     color (string),
-        //     canBreed (boolean),
-        //     shotRecords (array of objects with properties for date and typeOfShot)
-        // The dog object should have methods to:
-        //     bark() - will console.log “Woof!”
-        // getOlder() - will increase age by 1
-        // disableBreeding() - will set canBreed to false
-        // vaccinate(nameOfVaccination) - takes in an argument for the name of
-        // the vaccination and adds a new shot with the current date to the shotRecords array
 
-        var beverage = {};
-            beverage.make = "coke";
-            beverage.type = "Soft Drink";
-            beverage.volumeInLiters = 2;
-            beverage.priceInCents = 150.00;
-            beverage.expirationDate = "6/6/2022";
-            beverage.datesOfPreviousSips = ["6/11/2020", "6/12/2020"];
-            beverage.isOpen = false;
-    console.log(beverage);
+        // breed (string),
+        // weightInPounds (number),
+        // age (number),
+        // color (string),
+        // canBreed (boolean),
+        //     shotRecords (array of objects with properties for date and typeOfShot)
+
+        // The dog object should have methods to:
+        //      bark() - will console.log “Woof!”
+        //      getOlder() - will increase age by 1
+        //      disableBreeding() - will set canBreed to false
+        //      vaccinate(nameOfVaccination) - takes in an argument for the name of
+        //      the vaccination and adds a new shot with the current date to the shotRecords array
+
+        var dog = {};
+            dog.breed = "pitBull";
+            dog.weightInPounds = 9;
+            dog.age = 2;
+            dog.color = "black";
+            dog.canBreed = false;
+            dog.bark = ["6/12/2020"];
+            dog.isOpen = false;
+            dog.shotRecord =
+                [
+                    {
+                        // date: 9/9/2020,
+                        date: new Date(),
+                        typeOfShot: "Rabies"
+                    },
+                    {
+                        // date: 10/9/2020,
+                        date: new Date(),
+                        typeOfShot: "Covid-19"
+                    },
+                ];
+            dog.bark = function() {
+                console.log("Woof")
+            };
+            dog.getolder = function() {
+                this.age += 1;
+            };
+            dog.disableBreeding = function() {
+                this.canBreed = false;
+             };
+            dog.vaccinate = function(nameOfShot) {
+                this.shotRecord.push({date: new Date(), typeOfShot: nameOfShot });
+            };
+
+
+    dog.vaccinate(typeOfShot: "Flu");
+
+    // console.log(dog);
+    // console.log(dog.shotRecord);
+    // console.log(dog.bark());
+    // console.log(dog.getolder());
+    // console.log(dog.disableBreeding());
+    // console.log(dog.vaccinate());
 
 </script>
 </body>
