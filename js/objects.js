@@ -19,7 +19,7 @@ alert ( "Hi! Javier's JS Page." );
         lastName: 'Estrada',
         age: 57,
         gender: 'male',
-        interests: ['tennis', 'sand volleyball'],
+        interests: ['tennis', 'sand volleyball','coding'],
         bio: function () {
             alert ( this.firstName[0] + ' ' + this.lastName[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.' );
         },
@@ -52,10 +52,13 @@ alert ( "Hi! Javier's JS Page." );
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+        console.log(person.sayHello());
+        // console.log(person.firstName);
+        // console.log(person.lastName);
 
-    // log the make/model
-        console.log(person.firstName);
-        console.log(person.lastName);
+
+        // log the make/model
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -71,11 +74,11 @@ alert ( "Hi! Javier's JS Page." );
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+        var shoppers = [
+            {name: 'Cameron', amount: 180},
+            {name: 'Ryan', amount: 250},
+            {name: 'George', amount: 320}
+        ];
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
