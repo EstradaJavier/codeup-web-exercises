@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Enter Title Here</title>
+
+        <!----- STYLESHEET  STARTS  HERE ----->
+        <style src="jcss/external.css"></style>
+    </head>
+    <body>
+
+
+        <!----- JAVIASCRIPT STARTS  HERE ------->
+        <script>
+            (function() {
+                "use strict";
+
+            ////////// OBJECT CONSTRUCTOR USING A OBJECT BLUEPRINT  //////////
+            // first, create the blueprint object.
+            function Person (name, eyeColor, age ) {
+                this.name = name;
+                this.eyeColor = "green";
+                this.age = age;
+                this.updateAge = function() {
+                    return ++this.age;
+
+                };
+            };
+
+            // now we add the object constructors
+            let person01 = new Person("Javier", "green", 57);
+            let person02 = new Person("Alesha", "blue", 41);
+
+            console.log(person01);
+            console.log(person02);
+
+
+
+
+            })();
+        </script>
+    </body>
+</html>
