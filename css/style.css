@@ -1,0 +1,38 @@
+/*stylesheet*/
+:root {
+    --main-bg: #E6ECF0;
+    --link-color: #3B94D9;
+    --main-link-color: #848487;
+    --light-bg: #FFF;
+    --separator-color: #DDD;
+}
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    color: deeppink;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+ul {
+    list-style: lower-alpha;
+}
+
+body, html {
+    background-color: var(--main-bg);
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    font-family: Arial, Ubuntu, sans-serif;
+}
