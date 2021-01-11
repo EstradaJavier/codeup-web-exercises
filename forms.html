@@ -8,35 +8,60 @@
     </head>
     <body>
         <h2>Register With Us</h2>
-        <h2>Register With Us</h2>
         <form method="POST" action="https://request-inspector.glitch.me/">
             <label for="e-mail">e-mail:     </label>
-            <input id="e-mail" name="e-mail" type="e-mail">
+            <input id="e-mail" name="e-mail" type="e-mail" style="color:#888;"
+                   value="Enter e-mail">
 
-            <label for="password">Password:</label>
-            <input id="password" name="password" type="password">
+
+<!--            <input type="text" name="firstname" title="First Name" style="color:#888;"-->
+<!--                   value="First Name" onfocus="inputFocus(this)" onblur="inputBlur(this)" />-->
+
+
+
+            <label for="password"  value="First Name">Password:</label>
+            <input id="password" name="password" type="password" >
             <br>
             <br>
-            <label for="text-area">Enter bio here:</label>
-            <textarea name="bio"></textarea>
+            <label for="text-area"  >Enter bio here:</label>
+            <textarea name="bio" ></textarea>
             <br>
             <section>
                 <h2>How did you hear about us?</h2>
-                <input type="radio" name="quiz_question_1" value="A">billboard<br>
-                <input type="radio" name="quiz_question_2" value="B">radio advertisement<br>
-                <input type="radio" name="quiz_question_3" value="C">Internet advertisement<br>
-                <input type="radio" name="quiz_question_4" value="D">other<br>
+                <input type="radio" name="quiz_question_1" value="A">Billboard<br>
+                <input type="radio" name="quiz_question_1" value="B">Radio advertisement<br>
+                <input type="radio" name="quiz_question_1" value="C">Internet advertisement<br>
+                <input type="radio" name="quiz_question_1" value="D">Other<br>
             </section>
             <br>
 
-            <h2>What web browser you are using?</h2>
+            <h2>What web browser are you using?</h2>
             <select name="Web Browser">
-                <option value="MaC">MaC</option>
-                <option value="Windows">Windows</option>
-                <option value="Other">Other</option>
+                <option value="Safari">Safari</option>
+                <option value="Internet Explorer">Internet Explorer</option>
+                <option value="Google Chrome">Google Chrome</option>
+                <option value="Google Chrome">Firefox</option>
             </select>
+            <br>
+            <br>
+            <input name="newsletter_signup" value="true" type="checkbox" checked>Sign Up For The Email Newsletter
             <br><br>
+
+            <br>
+
+            <label for="videoGameConsole">What console are thinking about putting on a layaway plan?</label>
+            <select name="console" id="videoGameConsole">
+                <option value="">- please select -</option>
+                <option value="playstation">PlayStation 5</option>
+                <option value="switch">Nintendo Switch</option>
+                <option value="xbox">Xbox Series X</option>
+                <option value="nothing rn">Nothing for now. The struggle is real.</option>
+            </select>
+            <br>
+            <br>
             <input type="submit">
+
+            <input type="hidden" name="user_id" value="432">
 
         </form>
 
