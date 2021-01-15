@@ -1,21 +1,71 @@
-    /*stylesheet*/
-    :root {
-        --main-bg: #E6ECF0;
-        --link-color: #3B94D9;
-        --main-link-color: #848487;
-        --light-bg: #FFF;
-        --separator-color: #DDD;
-    }
-    
-    * {
+    html {
         box-sizing: border-box;
     }
-    
-    body, html {
-        background-color: var(--main-bg);
-        height: 100%;
-        width: 100%;
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        background-color: #b4d455;
+    }
+
+    a {
+        color: white;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+        /* TODO: Make this a flex container and align it's items to the center*/
+        display: flex;
+        align-items: center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.2);
+        margin: 20px;
+        padding: 20px;
+        border-radius: 4px;
+        text-align: center;
+        /*  TODO: Change this flex items basis to 100% of the page  */
+        flex-basis: 100%;
+    }
+
+    .card-title {
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+s
+    .card-body {
+        padding-bottom: 1em;
+    }
+
+    .feature-list {
         margin: 0;
         padding: 0;
-        font-family: Arial, Ubuntu, sans-serif;
+        list-style: none;
+    }
+
+    .feature-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .price {
+        font-size: 50px;
+        font-family: serif;
+        margin: 10px 0;
+    }
+
+    .btn-primary {
+        text-decoration: none;
+        background: #847477;
+        padding: 10px;
+        color: white;
+        border-radius: 4px;
     }
