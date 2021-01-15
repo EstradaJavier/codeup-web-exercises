@@ -1,0 +1,65 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Enter Title Here</title>
+
+        <!----- STYLESHEET  STARTS  HERE ----->
+        <style src=.css"></style>
+    </head>
+    <body>
+
+
+    <!----- JAVIASCRIPT STARTS  HERE ------->
+        <script>
+
+            (function () {
+                "use strict";
+            /*
+            Create a function, returnUserFirstLetters, that takes in array of user objects and
+            returns a string of the first letters in lowercase of all the user firstName
+            property values.
+            */
+            /*
+                    Example:
+            */
+
+            var users = [
+              {
+                age: 24,
+                firstName: 'John'
+              },
+              {
+                age: 43,
+                firstName: 'Cathy'
+              },
+              {
+                age: 65,
+                firstName: 'Bob'
+              }
+            ];
+
+            // returnUserFirstLetters(users) // returns the value "jcb"
+            function returnUserFirstLetters (userArray) {
+                let output= '';
+                for(let i = 0; i < userArray.length; i++) {
+                    output += userArray[i].firstName.charAt(0).toLowerCase()
+                }
+                return output;
+            };
+
+                console.log(returnUserFirstLetters(users));
+
+                var car = {};
+                car.make = "Toyota";
+                car.model = "Camry";
+
+                // use array notation to access "make" property
+                // console.log("The car make is: " + car["make"]);
+
+                // use dot notation to access "model" property
+                // console.log("The car model is: " + car.model);
+
+            }) ();
+    </script>
+    </body>
+</html>
