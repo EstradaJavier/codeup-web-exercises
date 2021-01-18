@@ -10,6 +10,14 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: black;
+}
+
+.container {
+    width: 70%
+    margin: 20px auto;
+}
 
 body, html {
     height: 100%;
@@ -21,7 +29,7 @@ body, html {
 
 .message {
     margin: 10px;
-    width: 80%;
+    width: 90%;
     border: 1px  solid lightgrey;
     border-style: solid;
     border-radius: 10px;
