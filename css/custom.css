@@ -1,21 +1,50 @@
-    /*stylesheet*/
-    :root {
-        --main-bg: #E6ECF0;
-        --link-color: #3B94D9;
-        --main-link-color: #848487;
-        --light-bg: #FFF;
-        --separator-color: #DDD;
-    }
-    
-    * {
-        box-sizing: border-box;
-    }
-    
-    body, html {
-        background-color: var(--main-bg);
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, Ubuntu, sans-serif;
-    }
+/*stylesheet*/
+
+/**make the welcome to Pizza Worl!  text transparent*!*/
+/*and centered*/
+h1 {
+    /*display: flex;*/
+    background-color: rgba(255,255,255,.5);
+
+}
+
+.jumbotron {
+    width: 100%;
+    height: auto;
+
+}
+This component should be hidden for devices with small screens
+    /*h1 {*/
+    /*    position:absolute;*/
+    /*    top:30px;*/
+    /*}*/
+    /*---------------------------------------------------------------*/
+.img {
+    position:relative;
+}
+
+h1 {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%
+}
+ /*/          ////////          /*/
+.container-fluid{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+.box .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    background: rgba(0, 0, 0, 0.8);
+    font-family: Arial,sans-serif;
+    color: #fff;
+    width: 60%; /* Set the width of the positioned div */
+}
