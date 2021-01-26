@@ -6,16 +6,20 @@
         --light-bg: #FFF;
         --separator-color: #DDD;
     }
-    
+
     * {
         box-sizing: border-box;
     }
-    
-    body, html {
-        background-color: var(--main-bg);
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, Ubuntu, sans-serif;
+
+    #main-jumbo {
+        background: url("img/pizza.png");
+        background-size: cover;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #main-jumbo h1 {
+        text-align: center;
+        background-color: white;
+        opacity: 0.6;
     }
