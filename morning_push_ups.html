@@ -21,15 +21,32 @@
 
         console.log(seven());
 
+
         // morning warm ups #2
-        let y = [];
-        function functionName(x) {
-            let y = x;
-            return ((y[0]) ,(y.length));
+
+        function firstAndLastArr(arr) {
+            let bucket = [];
+            bucket.push(arr[0]);
+            bucket.push(arr[arr.length - 1]);
+            return bucket;
         };
 
+        console.log(firstAndLastArr([1,2,3,4]));
+        console.log(firstAndLastArr(["dog", "cat", "rat", "bat"));
+        console.log(["Geoff"]);
+
+
+
+        // Alternate solution for problem #2.
+        let array = ['Where', 'the ','wild ','things', 'are']
+        function theArray() {
+            let first = array[0];
+            let last = array[array.length-1];
+            document.write("First element is, " + first +  " The Last element is "+ last);
+        }
+
         // morning warm ups #3
-        function functionName(x) {
+        function firstLast(x) {
 
             return (x);
         };
