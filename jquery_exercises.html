@@ -1,23 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Enter Title Here</title>
-
-        <!----- STYLESHEET  STARTS  HERE ----->
-        <style src="jcss/external.css"></style>
+        <title>jQuery Exercises</title>
     </head>
     <body>
+        <header id="head">
+            <h1>jQuery Exercises</h1>
+            <p id="codeup">A page for practicing jQuery!</p>
+        </header>
 
+        <div>
+            <h1 id="first-heading" class="codeup">Favorite Sodas</h1>
+            <ul>
+                <li class="codeup">Pepsi Wild Cherry</li>
+                <li>Coke</li>
+                <li>Sprite</li>
+                <li>OJ</li>
+                <li>Water</li>
+            </ul>
+        </div>
+        <div class="codeup">
+            <h1 id="second-heading">Favorite Games</h1>
+            <ul>
+                <li>Gotcha Force</li>
+                <li>Persona 4</li>
+                <li>Super Mario Odyssey</li>
+                <li>River City Girls</li>
+            </ul>
+        </div>
 
-        <!----- JAVIASCRIPT STARTS  HERE ------->
-        <script>
-            $(document).ready(function() {
-                alert( 'The DOM has finished loading!' );
-            });
-        </script>
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-                crossorigin="anonymous"></script>
-        <script src="/js/jquery.js"></script>
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/jquery_exercises.js"></script>
     </body>
 </html>
