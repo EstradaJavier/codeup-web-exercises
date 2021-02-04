@@ -1,25 +1,14 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Enter Title Here</title>
-            
-        <!----- STYLESHEET  STARTS  HERE ----->
-		<style src="jcss/external.css"></style>
-    </head>
-    <body>
-    
-    
-    
-        <!----- JAVIASCRIPT STARTS  HERE ------->    
-        <script>
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Title Here</title>
 
-            (function() {
-                "use strict";
-
-            
-            })();
-        </script>
-        
-        </script>
-    </body>
+    <!----- STYLESHEET  STARTS  HERE ----->
+    <style src="jcss/external.css"></style>
+</head>
+<body>
+.nav-link {    color: var(--main-link-color);    font-weight: bold;    text-decoration: none;}.nav-link:hover {    color: var(--link-color);}.profile {    background: var(--light-bg);}.btn {    border: 1px solid var(--main-link-color);    color: var(--main-link-color);    background: var(--light-bg);    font-weight: bold;    padding: 8px;    border-radius: 5px;}.btn-large {    font-size: 1.3em;    padding: 10px;}.img-circle {    border-radius: 100%;    border: 4px solid var(--light-bg);}.text-right {    text-align: right;}.text-muted {    color: var(--main-link-color);}Let's start with the main navigation header. When we position navigation links we don't use float orposition. We usually display the individual link elements inline-block.Each nav-item should display inline block and have a padding of 1.5em. Use the class top-nav tomake the navigation fixed, it also needs to use 100% of the width.Your main navigation element should look like the following
+Let's continue with the user's avatar and the Edit button positioning.Use absolute positioning to center the avatar, you'll need to adjust the top value. Use the classprofile-image for this purpose.Give a height of 80px to the profile class. One way to center text vertically is by changing itsline-height. If it matches the height of the container the text will be centered vertically. Center thebutton inside the .profile-form element.The avatar and edit button should look like the following imageIf you scroll down the page you'll notice that the avatar now appears on top of the main navigation. Fix thisissue using z-index. Change the fixed top navigation z-index to 1000 or bigger. Does it work with a smallervalue?profile-details, timeline, and who-to-follow should be flex items within a flex container. Todo this, set display: flex on the container class. They should use 25%, 50% and 25% of the widthrespectively. These elements should have a margin of .5em to both sides (0 for top and bottom).Use the container to add some space between the avatar and the new 3 columns (2em).Let's continue with the media component.The media selector should use 100% of the width of its container. Its background color should belight-bg. It should have a border at the bottom of 1px with color --separator-color. It must have apadding of .5em. It must have the following flex properties:display: flex;align-items: flex-start;flex-wrap: wrap;The media-image maximum width should be 50px. It must have a margin top of 1.33em.The media-body width will be 100%. We need to use calc to subtract the width of the image.To force the heading inside of the who-to-follow section to stretch the full width, add the following CSS:.who-to-follow h3    flex-basis: 100%;}
+Finally, remove the bullets and the padding from profile-items. Add a margin of .5em to theprofile-entry class.This section should look like the following imageThe whole page should look like this.Commit and push your changes to GitHub as usual.
+</body>
 </html>
