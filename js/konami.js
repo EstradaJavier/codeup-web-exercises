@@ -1,102 +1,47 @@
-"use strict"
+var global = {
 
-$(document).keyup(function(event){
-    console.log(event.keyCode);
-});
+    $('audio#pop')[0].play()
 
-alert("You reached the konami js page!")
-// a key map of allowed keys
-var allowedKeys = {
-    38: 'up',
-    38: 'up',
-    40: 'down',
-    40: 'down',
-    37: 'left',
-    39: 'right',
-    37: 'left',
-    39: 'right',
-    65: 'a',
-    66: 'b'
-};
+    konami: function() {
+        var konamikeys = [38,38,40,40,37,39,37,39,66,65],
+            started = false,
+            count = 0;
 
-// the 'official' Konami Code sequence
-var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+        $(document).keydown(function(e){
+            var reset = function() {
+                started = false;
+                count = 0;
+                return;
+            };
 
-// a variable to remember the 'position' the user has reached so far.
-var konamiCodePosition = 0;
+            key = e.keyCode;
 
-// add keydown event listener
-document.addEventListener('keydown', function(e) {
-    // get the value of the key code from the key map
-    var key = allowedKeys[e.keyCode];
+            // Begin watching if first key in sequence was pressed.
+            if(!started){
+                if(key == 38){
+                    started = true;
+                }
+            }
 
-    // get the value of the required key from the konami code
-    var requiredKey = konamiCode[konamiCodePosition];
+            // If we've started, pay attention to key presses, looking for right sequence.
+            if (started){
 
-    // compare the key with the required key
-    if (key == requiredKey) {
-
-        // move to the next key in the konami code sequence
-        konamiCodePosition++;
-
-        // if the last key is reached, activate cheats
-        if (konamiCodePosition == konamiCode.length) {
-            activateCheats();
-            konamiCodePosition = 0;
-        }
-    } else {
-        konamiCodePosition = 0;
+                if (konamikeys[count] == key){
+                    count++;
+                } else {
+                    // Incorrect key, restart.
+                    reset();
+                }
+                if (count == 10){
+                    // Success!
+                    alert('Konami code entered! Do something cool here.');
+                    reset();
+                }
+            } else {
+                reset();
+            }
+        });
     }
-});
-
-function activateCheats() {
-
-    var audio = new Audio('https://s3-eu-west-1.amazonaws.com/wdildnproject2/toasty.mp3');
-    audio.play();
-
-    $('.toasty').addClass('animateIn');
-    setTimeout(function(){ $('.toasty').removeClass('animateIn');
-    }, 3500);
 }
 
-var TxtRotate = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
-
-TxtRotate.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-
-    if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-    var that = this;
-    var delta = 300 - Math.random() * 100;
-
-
-    setTimeout(function() {
-        that.tick();
-    }, delta);
-};
-
-window.onload = function() {
-    var elements = document.getElementsByClassName('txt-rotate');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-rotate');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-            new TxtRotate(elements[i], JSON.parse(toRotate), period);
-        }
-    }
-};
+global.konami();
