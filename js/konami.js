@@ -1,4 +1,9 @@
 "use strict"
+
+$(document).keyup(function(event){
+    console.log(event.keyCode);
+});
+
 alert("You reached the konami js page!")
 // a key map of allowed keys
 var allowedKeys = {
@@ -24,6 +29,7 @@ var konamiCodePosition = 0;
 document.addEventListener('keydown', function(e) {
     // get the value of the key code from the key map
     var key = allowedKeys[e.keyCode];
+
     // get the value of the required key from the konami code
     var requiredKey = konamiCode[konamiCodePosition];
 

@@ -74,6 +74,13 @@
         text-shadow: 4px 4px 6px #222222;
     }
 
+    h3 {
+        border: 1px solid white;
+        color: darkblue;
+        text-align: center;
+        text-shadow: 4px 4px 6px #222222;
+    }
+
     /*body {*/
     /*    background-position: bottom;*/
     /*}*/
