@@ -27,10 +27,9 @@ function onPasswordInput(e) {
     const $formGroup = $(e.target).parent().parent().parent();
     const strength = getPasswordStrength(e.target.value);
 
-    // clear out any old classes
-    $formGroup.removeClass(["text-danger", "text-warning", "text-success"]);
+     $formGroup.removeClass(["text-danger", "text-warning", "text-success"]);
 
-    // add the right class
+    // add the right class //
     if (strength === "weak") {
         $formGroup.addClass("text-danger");
     } else if (strength === "moderate") {
