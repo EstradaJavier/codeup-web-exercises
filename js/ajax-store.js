@@ -3,8 +3,6 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
-        $.get('data/inventory.json')
-            .done(handleResponse);
 
 
     // TODO: Take the data from inventory.json and append it to the products table
@@ -31,6 +29,13 @@
             console.log(html);
             $('#items').html(html);
         }
+
+// $.get("coffee.json")
+
+        $.get('https://ajax-demo.zach.wiki/featured-items')
+            .done(handleResponse);
+
+
 
     })();
 

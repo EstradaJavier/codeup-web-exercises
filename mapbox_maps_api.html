@@ -1,22 +1,83 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Enter Title Here</title>
-    
-        <!----- STYLESHEET  STARTS  HERE ----->
-        <style src="jcss/external.css"></style>
+        <title>Mapbox Project</title>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+
+        <style src="css/geocode-style.js"></style>
+        <link rel="stylesheet" href="js/geocode-utils.js">
+
     </head>
     <body>
-        
-        
-        <!----- JAVIASCRIPT STARTS  HERE ------->
+        <div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid saddlebrown;'></div>
+        <script src="js/keys.js"></script>
+        <script src="js/geocode-utils.js"></script>
+
+
+
         <script>
-        
-            (function () {
-                "use strict";
-        
-        
-            }) ();
+            var numberToStopAt = 5;
+
+
+                        /**
+                         * What are we going to learn today?
+                         * ---------------------------------
+                         * How we can prevent API Keys from being pushed to GitHub ~
+                         *  use:
+                         *
+                         * How to navigate the MapBox API Documentation ~
+                         * use:
+                         *
+                         * How to create a map using the MapBox API ~
+                         * use:
+                         *
+                         * How to add controls to a map ~
+                         * use:
+                         *
+                         * How to add a marker to a map ~
+                         * use:
+                         *
+                         * How to add multiple markers to a map ~
+                         * use:
+                         *
+                         * How to add a pop up text box to a marker ~
+                         * use:
+                         *
+                         * */
+            mapboxgl.accessToken = mapboxToken;
+            var map = new mapboxgl.Map({
+                container: 'mapbox-map',
+                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                center: [-98.49, 29.42],                     // starting position [lng, lat]
+                zoom: 9                                      // default zoom
+            });
+
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.NavigationControl());
+
+            // create the popup
+            var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+                '<h4 id="zoo-heading">The San Antonio Zoo.</h4>'
+            );
+
+            // Adding a marker to the map
+            var marker = new mapboxgl.Marker()
+                .setLngLat([-98.4737, 29.4624])
+                .setPopup(popup)
+                .addTo(map);
+
+            geocode("600 Navarro St #600, San Antonio, TX 78205", mapboxToken).then(function (data) {
+                var codeupMarker = new mapboxgl.Marker()
+                    .setLngLat(data)
+                    .addTo(map);
+            });
+
+            reverseGeocode({lat: 29.8829, lng: -97.9443}, mapboxToken).then(function (data) {
+                console.log(data);
+            })
+
         </script>
     </body>
 </html>
