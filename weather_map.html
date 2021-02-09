@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Open Weather Map Playground Time</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/keys.js"></script>
+    </head>
+    <body>
+<
+
+        <div id='map'></div>
+
+        <div id="card1" class="card text-center" style="width: 18rem;">
+            <div id="weatherDate1" class="card-header">Weather Date:</div>
+            <ul class="list-group list-group-flush">
+                <li id="highLowTemp1" class="list-group-item">High and Low Temp.</li>
+                <li id="feelsLike1" class="list-group-item">Feel Like</li>
+                <li id="humidity1" class="list-group-item">Humidity</li>
+                <li id="wind1" class="list-group-item">Wind</li>
+                <li id="pressure1" class="list-group-item">Pressure</li>
+            </ul>
+        </div>
+
+        <script>
+            // Two ways to query the API:
+            // 1. With a string!
+            $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN).done(function(data) {
+                console.log(data);
+            });
+
+            // 2. With a string... AND AN OBJECT!!!
+            // $.get("https://api.openweathermap.org/data/2.5/onecall", {
+            //     APPID: OWM_TOKEN,
+            //     lat: 29.4241,
+            //     lon: -98.4936,
+            //     units: "imperial",
+            //     exclude: ["minutely", "hourly"]
+            // }).done(function(data) {
+            //     console.log(data);
+            // });
+
+        </script>
+        <!-- JS files go right before the closing <body> tag -->
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/keys.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+        <script src="js/weather_map.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>
