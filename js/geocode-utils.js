@@ -14,7 +14,15 @@
  *
  */
 // this is START everything inported from the html script section.
+var numberToStopAt = 5;
 
+mapboxgl.accessToken = mapboxToken;
+var map = new mapboxgl.Map({
+    container: 'mapbox-map',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [-98.49, 29.42],                     // starting position [lng, lat]
+    zoom: 9                                      // default zoom
+});
 
 // this is END everything inported from the html script section.
 
@@ -66,7 +74,7 @@ function reverseGeocode(coordinates, token) {
                 address    : "9091 Fair Oaks Pkwy, Fair Oaks Ranch, TX 78015",
                 coordinates: [29.72067, -98.66],
                 categoriesd: ["Steaks", "Salads"],
-                    price:   "$ 50.00"
+                price:   "$ 50.00"
             },
 
             {
@@ -74,7 +82,7 @@ function reverseGeocode(coordinates, token) {
                 address    : "1175 I-10 West San Antonio TX 78230",
                 coordinates: [29.72067, -98.66],
                 categoriesd: ["Steaks", "Salads"],
-                    price:   "$ 100.00"
+                price:   "$ 100.00"
             },
 
             {
@@ -82,11 +90,11 @@ function reverseGeocode(coordinates, token) {
                 address    : "12730 W I-10 Ste 314, San Antonio, TX 78230",
                 coordinates: [29.562705873959917, -98.59311953029197],
                 categoriesd: ["Bagels", "Coffee"],
-                    price:   "$ 10.00"
+                price      :   "$ 10.00"
             },
         ]
 
-    favRestaurants.forEach(function (favRestaurants) {
+    favRestaurants.forEach(function (restaurants) {
         let popup = new mapboxgl.Popup({offset: 25})
             .setHTML("<h4" + restaurants.name + "</h4>");
 
