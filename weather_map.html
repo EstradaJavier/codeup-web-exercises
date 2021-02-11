@@ -10,42 +10,112 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
         <script src="js/jquery-3.5.1.js"></script>
         <script src="js/keys.js"></script>
+        <style>
+            #weather-title {
+                text-align: center;
+                color: lightcyan;
+                text-shadow: 4px 4px 6px #000;
+            }
+        </style>
     </head>
     <body>
-<
+    <!--create variables to populate my cards    -->
 
+            let highLowTemp = data.
+            let feelsLike = data.
+            let humidity = data.
+            let wind = data.
+            let pressure = data.
+
+
+    <!--create the card(s)    -->
         <div id='map'></div>
 
-        <div id="card1" class="card text-center" style="width: 18rem;">
-            <div id="weatherDate1" class="card-header">Weather Date:</div>
-            <ul class="list-group list-group-flush">
-                <li id="highLowTemp1" class="list-group-item">High and Low Temp.</li>
-                <li id="feelsLike1" class="list-group-item">Feel Like</li>
-                <li id="humidity1" class="list-group-item">Humidity</li>
-                <li id="wind1" class="list-group-item">Wind</li>
-                <li id="pressure1" class="list-group-item">Pressure</li>
-            </ul>
-        </div>
+        <h1 id="weather-title">Weather Map</h1>
+
+        <section class="container-fluid d-flex flex-row justify-content-around">
+            <div id="card0" class="card text-center" style="width: 18rem;">
+                <div id="weatherDate0" class="card-header">Weather Date:</div>
+                <ul class="list-group list-group-flush">
+                    <li id="highLowTemp0" class="list-group-item">High and Low Temp.</li>
+                    <li id="feelsLike0" class="list-group-item">Feel Like</li>
+                    <li id="humidity0" class="list-group-item">Humidity</li>
+                    <li id="wind0" class="list-group-item">Wind</li>
+                    <li id="pressure0" class="list-group-item">Pressure</li>
+                </ul>
+            </div>
+
+            <div id="card1" class="card text-center" style="width: 18rem;">
+                <div id="weatherDate1" class="card-header">Weather Date:</div>
+                <ul class="list-group list-group-flush">
+                    <li id="highLowTemp1" class="list-group-item">High and Low Temp.</li>
+                    <li id="feelsLike1" class="list-group-item">Feel Like</li>
+                    <li id="humidity1" class="list-group-item">Humidity</li>
+                    <li id="wind1" class="list-group-item">Wind</li>
+                    <li id="pressure1" class="list-group-item">Pressure</li>
+                </ul>
+            </div>
+
+            <div id="card2" class="card text-center" style="width: 18rem;">
+                <div id="weatherDate2" class="card-header">Weather Date:</div>
+                <ul class="list-group list-group-flush">
+                    <li id="highLowTemp2" class="list-group-item">High and Low Temp.</li>
+                    <li id="feelsLike2" class="list-group-item">Feel Like</li>
+                    <li id="humidity2" class="list-group-item">Humidity</li>
+                    <li id="wind2" class="list-group-item">Wind</li>
+                    <li id="pressure2" class="list-group-item">Pressure</li>
+                </ul>
+            </div>
+
+            <div id="card3" class="card text-center" style="width: 18rem;">
+                <div id="weatherDate3" class="card-header">Weather Date:</div>
+                <ul class="list-group list-group-flush">
+                    <li id="highLowTemp3" class="list-group-item">High and Low Temp.</li>
+                    <li id="feelsLike3" class="list-group-item">Feel Like</li>
+                    <li id="humidity3" class="list-group-item">Humidity</li>
+                    <li id="wind3" class="list-group-item">Wind</li>
+                    <li id="pressure3" class="list-group-item">Pressure</li>
+                </ul>
+            </div>
+
+            <div id="card4" class="card text-center" style="width: 18rem;">
+                <div id="weatherDate4" class="card-header">Weather Date:</div>
+                <ul class="list-group list-group-flush">
+                    <li id="highLowTemp4" class="list-group-item">High and Low Temp.</li>
+                    <li id="feelsLike4" class="list-group-item">Feel Like</li>
+                    <li id="humidity4" class="list-group-item">Humidity</li>
+                    <li id="wind4" class="list-group-item">Wind</li>
+                    <li id="pressure4" class="list-group-item">Pressure</li>
+                </ul>
+            </div>
+            <!--            <div id="map"></div>-->
 
         <script>
-            // Two ways to query the API:
-            // 1. With a string!
-            $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN).done(function(data) {
+            // load the the api from open weather map
+            $.get("https://api.openweathermap.org/data/2.5/onecall", {
+                APPID: OWM_TOKEN,
+                lat: 29.72548,
+                lon: -98.66190,
+                units: "imperial",
+
+                exclude: ["minutely", "hourly"]
+            }).done(function(data) {
                 console.log(data);
             });
 
-            // 2. With a string... AND AN OBJECT!!!
-            // $.get("https://api.openweathermap.org/data/2.5/onecall", {
-            //     APPID: OWM_TOKEN,
-            //     lat: 29.4241,
-            //     lon: -98.4936,
-            //     units: "imperial",
-            //     exclude: ["minutely", "hourly"]
-            // }).done(function(data) {
-            //     console.log(data);
-            // });
+
+            // assign variables for the [data] that is being returned from weather map api
+
+            // use a for loop or a forEach loop.
+
+
+
+
+
 
         </script>
+
+
         <!-- JS files go right before the closing <body> tag -->
         <script src="js/jquery-3.5.1.js"></script>
         <script src="js/keys.js"></script>
