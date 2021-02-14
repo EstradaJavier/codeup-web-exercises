@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-    <html>
+<html>
     <head>
         <title>Online Store</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-
     </head>
     <body>
 
-        <h1>Acme Tool Store</h1>
+        <h1>My Tool Store</h1>
 
         <table id="products">
             <thead>
@@ -18,56 +16,63 @@
                     <th>Categories</th>
                 </tr>
             </thead>
-            <tbody id="insertProducts"></tbody>
+<!--        this is the table that will hold all of our returned ajax data.-->
+            <tbody id="insertProducts">
+                <tr>
+                    <td>Hammer</td>
+                    <td>25</td>
+                    <td>tool</td>
+                    <td>20</td>
+                </tr>
+
+
+            </tbody>
         </table>
+        <button id="refresh-btn">Refresh Table</button>
+
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 
         <script>
-            "use strict"
-            console.log("document loaded!")
+            "use strict";
+            // TODO: Create an AJAX GET request for the file under data/inventory.json
+
             $(document).ready(function() {
+                // alert( 'jQuery  has finished loading!' );
 
-
-
-                // TODO: Create an AJAX GET request for the file under data/inventory.json
-
-                $.get('data/inventory.json')
-                    .done(handleResponse);
-
-
-                // TODO: Take the data from inventory.json and append it to the products table
-                //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-                //             its contents and fields
-                //       HINT: You will want to target #insertProducts for your new HTML elements
-
-
-                function handleResponse(items) {
-                    let html = "";
-                    console.log("items (api response):")
-                    console.log(items)
-                    items.forEach(function(item) {
-                        // generate html for this item
-                        let itemHtml = '<div class="col-sm-6">'
-                        itemHtml += '<h2>' + item.name + '</h2>';
-                        itemHtml += '<p>' + item.description + '</p>';
-                        itemHtml += '<p>Price: $' + item.price + '</p>';
-                        itemHtml += '</div>';
-                        console.log('inside forEach loop, itemHtml:')
-                        console.log(itemHtml);
-                        html += itemHtml;
+                function refreshFromJson() {
+                    $.get("data/inventory.json").done(function(tools) {
+                        $("#insertProducts").html("");
+                        for(let i = 0; i < tools.length; i += 1) {
+                            // console.log(buildToolHTML(tools[i]));
+                            $('#insertProducts').append(buildToolHTML(tools[i]));
+                        }
                     });
-                    console.log('finished the forEach loop, html:')
-                    console.log(html);
-                    $('#items').html(html);
                 }
 
-                // $.get("coffee.json")
 
+                    // TODO: Take the data from inventory.json and append it to the products table
+                    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+                    //             its contents and fields
+                    //
+                    // We can now take the data that we get back from our ajax request and pass
+                    // it to another function that is responsible to building out the HTML the table.
+                    function buildToolHTML(tool) {
+                        let html = "                <tr>\n" +
+                            "                    <td>" + tool.title + "</td>\n" +
+                            "                    <td>" + tool.quantity + "</td>\n" +
+                            "                    <td>" + tool.categories.join(",  ") + "</td>\n" +
+                            "                    <td>" + tool.price + "</td>\n" +
+                            "                </tr>";
+                            return html;
+                    }
 
+                    $("#refresh-btn").click(refreshFromJson);
+                    refreshFromJson();
 
-            })();
+            });
         </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-<!--        <script src="js/ajax-store.js"></script>-->
+        <script src="js/ajax-store.js"></script>
     </body>
 </html>
