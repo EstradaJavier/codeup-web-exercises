@@ -8,8 +8,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
-        <script src="js/jquery-3.5.1.js"></script>
-        <script src="js/keys.js"></script>
         <style>
             #weather-title {
                 text-align: center;
@@ -19,17 +17,10 @@
         </style>
     </head>
     <body>
-    <!--create variables to populate my cards    -->
-
-            let highLowTemp = data.
-            let feelsLike = data.
-            let humidity = data.
-            let wind = data.
-            let pressure = data.
 
 
-    <!--create the card(s)    -->
-        <div id='map'></div>
+
+    <!--create HTML card(s)    -->
 
         <h1 id="weather-title">Weather Map</h1>
 
@@ -38,7 +29,7 @@
                 <div id="weatherDate0" class="card-header">Weather Date:</div>
                 <ul class="list-group list-group-flush">
                     <li id="highLowTemp0" class="list-group-item">High and Low Temp.</li>
-                    <li id="feelsLike0" class="list-group-item">Feel Like</li>
+                    <li id="description0" class="list-group-item">Description</li>
                     <li id="humidity0" class="list-group-item">Humidity</li>
                     <li id="wind0" class="list-group-item">Wind</li>
                     <li id="pressure0" class="list-group-item">Pressure</li>
@@ -49,7 +40,7 @@
                 <div id="weatherDate1" class="card-header">Weather Date:</div>
                 <ul class="list-group list-group-flush">
                     <li id="highLowTemp1" class="list-group-item">High and Low Temp.</li>
-                    <li id="feelsLike1" class="list-group-item">Feel Like</li>
+                    <li id="description1" class="list-group-item">Description</li>
                     <li id="humidity1" class="list-group-item">Humidity</li>
                     <li id="wind1" class="list-group-item">Wind</li>
                     <li id="pressure1" class="list-group-item">Pressure</li>
@@ -60,7 +51,7 @@
                 <div id="weatherDate2" class="card-header">Weather Date:</div>
                 <ul class="list-group list-group-flush">
                     <li id="highLowTemp2" class="list-group-item">High and Low Temp.</li>
-                    <li id="feelsLike2" class="list-group-item">Feel Like</li>
+                    <li id="descrioption2" class="list-group-item">Description</li>
                     <li id="humidity2" class="list-group-item">Humidity</li>
                     <li id="wind2" class="list-group-item">Wind</li>
                     <li id="pressure2" class="list-group-item">Pressure</li>
@@ -71,7 +62,7 @@
                 <div id="weatherDate3" class="card-header">Weather Date:</div>
                 <ul class="list-group list-group-flush">
                     <li id="highLowTemp3" class="list-group-item">High and Low Temp.</li>
-                    <li id="feelsLike3" class="list-group-item">Feel Like</li>
+                    <li id="descrioption3" class="list-group-item">Description</li>
                     <li id="humidity3" class="list-group-item">Humidity</li>
                     <li id="wind3" class="list-group-item">Wind</li>
                     <li id="pressure3" class="list-group-item">Pressure</li>
@@ -82,46 +73,72 @@
                 <div id="weatherDate4" class="card-header">Weather Date:</div>
                 <ul class="list-group list-group-flush">
                     <li id="highLowTemp4" class="list-group-item">High and Low Temp.</li>
-                    <li id="feelsLike4" class="list-group-item">Feel Like</li>
+                    <li id="description4" class="list-group-item">Description : </li>
                     <li id="humidity4" class="list-group-item">Humidity</li>
                     <li id="wind4" class="list-group-item">Wind</li>
                     <li id="pressure4" class="list-group-item">Pressure</li>
                 </ul>
             </div>
+            </section>
             <!--            <div id="map"></div>-->
+            <script src="js/jquery-3.5.1.js"></script>
 
+
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+            <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+            <script src="js/keys.js"></script>
+        <script src="js/weather_map.js"></script>
         <script>
+            <!--create variables to populate my cards    -->
+
+
+
             // load the the api from open weather map
             $.get("https://api.openweathermap.org/data/2.5/onecall", {
                 APPID: OWM_TOKEN,
-                lat: 29.72548,
-                lon: -98.66190,
+                lat: 29.424349,
+                lon: -98.491142,
                 units: "imperial",
-
                 exclude: ["minutely", "hourly"]
             }).done(function(data) {
                 console.log(data);
+                for(let i = 0; i < 5; i++) {
+                    // console.log ( '5 day forecast', data.daily[0].temp.max );
+                    let highTemp = data.daily[i].temp.max;
+                    console.log("high temp is: " + highTemp);
+                    let lowTemp = data.daily[i].temp.min;
+                    console.log("low temp: " + lowTemp);
+                    let humidity = data.daily[i].humidity;
+                    console.log("humidity " + humidity);
+                    let feelsLike = data.daily[i].feels_like;
+                    console.log("feels like " + feelsLike);
+                };
             });
+
+
 
 
             // assign variables for the [data] that is being returned from weather map api
 
-            // use a for loop or a forEach loop.
-
-
-
-
+            // use a for loop to populate 5 cards--(data from JSON Object).
+            // for(let i = 0; i < 5; i++) {
+            //
+            //     console.log(data.temp);
+            //     let highLowTemp = (data.hi[i]);
+            //     let highLowTemp = (data.low[i]);
+            //     let feelsLike   = (data.feels_like[i]);
+            //     let humidity    = (data.humidity[i]);
+            //     let wind        = (data.wind_speed[i]);
+            //     let pressure    = (data.pressure[i]);
+            // };
 
 
         </script>
 
 
         <!-- JS files go right before the closing <body> tag -->
-        <script src="js/jquery-3.5.1.js"></script>
-        <script src="js/keys.js"></script>
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
-        <script src="js/weather_map.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
     </body>
 </html>
