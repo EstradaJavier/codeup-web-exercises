@@ -112,7 +112,7 @@ function reverseGeocode(coordinates, token) {
                 container: 'mapbox-map',
                 style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
                 center: [-98.49, 29.42],                     // starting position [lng, lat]
-                zoom: 9                                      // default zoom
+                zoom: 25                                     // default zoom
             });
 
                 // Add zoom and rotation controls to the map.
