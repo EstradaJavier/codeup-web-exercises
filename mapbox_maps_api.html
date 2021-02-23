@@ -9,6 +9,10 @@
         <style src="css/geocode-style.js"></style>
         <link rel="stylesheet" href="js/geocode-utils.js">
 
+        <style>
+
+        </style>
+
     </head>
     <body>
         <div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid saddlebrown;'></div>
@@ -19,32 +23,6 @@
         <script>
             // var numberToStopAt = 5;
 
-
-                        /**
-                         * What are we going to learn today?
-                         * ---------------------------------
-                         * How we can prevent API Keys from being pushed to GitHub ~
-                         *  use:
-                         *
-                         * How to navigate the MapBox API Documentation ~
-                         * use:
-                         *
-                         * How to create a map using the MapBox API ~
-                         * use:
-                         *
-                         * How to add controls to a map ~
-                         * use:
-                         *
-                         * How to add a marker to a map ~
-                         * use:
-                         *
-                         * How to add multiple markers to a map ~
-                         * use:
-                         *
-                         * How to add a pop up text box to a marker ~
-                         * use:
-                         *
-                         * */
             // mapboxgl.accessToken = mapboxToken;
             // var map = new mapboxgl.Map({
             //     container: 'mapbox-map',
@@ -58,16 +36,16 @@
 
             // create the popup
             var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-                '<h4 id="zoo-heading">The San Antonio Zoo.</h4>'
+                '<h3 id="irish-pub">Conroy's Irish Pub</h4>'
             );
 
             // Adding a marker to the map
             var marker = new mapboxgl.Marker()
-                .setLngLat([-98.4737, 29.4624])
+                .setLngLat([29.72130, -98.66475 ])
                 .setPopup(popup)
                 .addTo(map);
 
-            geocode("600 Navarro St #600, San Antonio, TX 78205", mapboxToken).then(function (data) {
+            geocode("9091 Fair Oaks Pkwy, Fair Oaks Ranch, TX 78015", mapboxToken).then(function (data) {
                 var codeupMarker = new mapboxgl.Marker()
                     .setLngLat(data)
                     .addTo(map);
