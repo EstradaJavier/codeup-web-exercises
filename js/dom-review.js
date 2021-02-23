@@ -1,8 +1,7 @@
-(function() {
-    "use strict";
-    alert("Yes! We reached Javier's JS Page.)
-    
-        
+alert("Javier, I am here: [js/dom-review.js] ")
 
+"use strict"
 
-})();
+window.onload = function() {
+    alert( 'The page has finished loading!' );
+}
