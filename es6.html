@@ -1,97 +1,91 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>Enter Title Here</title>
 
-        <!----- STYLESHEET  STARTS  HERE ----->
-        <style src="jcss/external.css"></style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>ES6 Refactor</title>
+
+        <link
+                href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+                crossorigin="anonymous"
     </head>
     <body>
+    <main class="container">
+        <h1>ES6 Refactor</h1>
+        <h3>Top 3 Favorite Movies</h3>
+        <div id="favMovies">
+            <ol>
+                <li class="movie"></li>
+                <hr>
+                <li class="movie"></li>
+                <hr>
+                <li class="movie"></li>
+            </ol>
+        </div>
 
+        <button id="showBtn" class="btn btn-primary">Show Movies</button>
+    </main>
 
-    <script>
-        /*
- * Complete the TODO items below
- */
-        const users = [
-            {
-                name: 'zach',
-                email: 'zach@codeup.com',
-                languages: ['javascript', 'bash']
-            },
-            {
-                name: 'ryan',
-                email: 'ryan@codeup.com',
-                languages: ['clojure', 'javascript']
-            },
-            {
-                name: 'luis',
-                email: 'luis@codeup.com',
-                languages: ['java', 'scala', 'php']
-            },
-            {
-                name: 'fernando',
-                email: 'fernando@codeup.com',
-                languages: ['java', 'php', 'sql']
-            },
-            {
-                name: 'javier',
-                email: 'javafx25@codeup.com',
-                languages: ['html', 'css', 'javascript', 'php']
-            }
-        ];
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-        // TODO: fill in your name and email and add some programming languages you know
-        // to the languages array
-        // TODO: replace the `var` keyword with `const`, then try to reassign a variable
-        // declared as `const`
-        var name = 'your_name_here';
-        var email = '';
-        var languages = [];
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
-        // TODO: rewrite the object literal using object property shorthand
-        users.push({
-            name: name,
-            email: email,
-            languages: languages
-        });
+        <script>
 
-        // TODO: replace `var` with `let` in the following variable declarations
-        var emails = [];
-        var names = [];
+            // This script works fine but let's update the JS!
+            // TODO: REFACTOR AS MANY PARTS OF THIS SCRIPT FROM ES5 TO ES6 SYNTAX AS POSSIBLE
 
-        // TODO: rewrite the following using arrow functions
-        users.forEach(function(user) {
-            return emails.push(user.email);
-        });
-        users.forEach(function(user) {
-            return names.push(user.name);
-        });
+            (function() {
 
-        // TODO: replace `var` with `let` in the following declaration
-        var developers = [];
-        users.forEach(function(user) {
-            // TODO: rewrite the code below to use object destructuring assignment
-            //       note that you can also use destructuring assignment in the function
-            //       parameter definition
-            const name = user.name;
-            const email = user.email;
-            const languages = user.languages;
+                "use strict";
 
-            // TODO: rewrite the assignment below to use template strings
-            developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
-        });
+                let showBtn = document.getElementById("showBtn");
 
-        // TODO: Use `let` for the following variable
-        var list = '<ul>';
+                var movies = [
+                    {
+                        name: "LOTR",
+                        year: "2001",
+                        genre: "Fantasy"
+                    },
+                    {
+                        name: "The Matrix",
+                        year: "1999",
+                        genre: "Sci-Fi"
+                    },
+                    {
+                        name: "Shine",
+                        year: "1996",
+                        genre: "Drama"
+                    }
+                ];
 
-        // TODO: rewrite the following loop to use a for..of loop
-        developers.forEach(function (developer) {
+                var buildMovieHTML = function (movie) {
+                    var html = "";
+                    html += '<ul><li>' + movie.name;
+                    html +=  '</li><li>' + movie.year;
+                    html += '</li><li>' + movie.genre + '</li></ul>';
+                    return html;
+                }
 
-            // TODO: rewrite the assignment below to use template strings
-            list += '<li>' + developer + '</li>';
-        });
-        list += '</ul>';
-    </script>
+                var addHTMLToPage = function (movies) {
+                    var movieItems = document.getElementsByClassName('movie');
+                    for (var i = 0; i < movies.length; i += 1) {
+                        movieItems[i].innerHTML = buildMovieHTML(movies[i]);
+                    }
+                }
+
+                showBtn.addEventListener("click", function() {
+                    addHTMLToPage(movies);
+                });
+
+            })();
+        </script>
     </body>
 </html>
