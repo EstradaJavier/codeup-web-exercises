@@ -2,20 +2,112 @@
     <head>
         <meta charset="UTF-8">
         <title>Enter Title Here</title>
-    
+
         <!----- STYLESHEET  STARTS  HERE ----->
         <style src="jcss/external.css"></style>
     </head>
     <body>
-        
-        
+
+
         <!----- JAVIASCRIPT STARTS  HERE ------->
         <script>
-        
+
             (function () {
-                "use strict";
-        
-        
+                const users = [
+                    {
+                        id: 1,
+                        name: 'ryan',
+                        email: 'ryan@codeup.com',
+                        languages: ['clojure', 'javascript'],
+                        yearsOfExperience: 5
+                    },
+                    {
+                        id: 2,
+                        name: 'luis',
+                        email: 'luis@codeup.com',
+                        languages: ['java', 'scala', 'php'],
+                        yearsOfExperience: 6
+                    },
+                    {
+                        id: 3,
+                        name: 'zach',
+                        email: 'zach@codeup.com',
+                        languages: ['javascript', 'bash'],
+                        yearsOfExperience: 7
+                    },
+                    {
+                        id: 4,
+                        name: 'fernando',
+                        email: 'fernando@codeup.com',
+                        languages: ['java', 'php', 'sql'],
+                        yearsOfExperience: 8
+                    },
+                    {
+                        id: 5,
+                        name: 'justin',
+                        email: 'justin@codeup.com',
+                        languages: ['html', 'css', 'javascript', 'php'],
+                        yearsOfExperience: 9
+                    }
+                ];
+
+                // TODO: code used to push the name email and languages to the
+                // users array.
+
+                // this is the variables that directly correspond to the users json array
+                const name = "bob";
+                const email = "bob@email.com";
+                const languages = ["javascript", "dart", "kotlin"];
+
+                // and this is how we push up those variables to the names json array
+                users.push({
+                    name,
+                    email,
+                    languages
+                });
+
+                // console.log(users);
+
+                let emails = [];
+                let names = [];
+
+                // rewrite the following using arrow functions
+
+                // users.forEach(fucntion(user) {
+                //     return emails.push(user.email);
+                // });
+                // users.forEach((user) => emails.push(user.email));
+                // a destructure version of this:
+                users.forEach(({ email }) => emails.push(email));
+
+
+                // users.forEach(fucntion(user) {
+                //     return names.push(user.name)
+                // });
+                // users.forEach((user) => names.push(user.name));
+                // a destructure version of this:
+                users.forEach(({ name }) => names.push(name));
+
+                // console.log(names);
+                // console.log(emails);
+
+                let developers = [];
+                users.forEach(function(user) {
+                    //TODO: rewrite the code below to use object destructuring assignment
+                    //  note that you can also use destructuring assignment in the function
+                    // parameter definition
+                    const name = user,
+                    const email =
+                    const languages =
+                });
+
+
+
+
+
+
+
+
             }) ();
         </script>
     </body>

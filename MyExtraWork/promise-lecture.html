@@ -1,22 +1,91 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Enter Title Here</title>
-    
-        <!----- STYLESHEET  STARTS  HERE ----->
-        <style src="jcss/external.css"></style>
-    </head>
-    <body>
-        
-        
-        <!----- JAVIASCRIPT STARTS  HERE ------->
-        <script>
-        
-            (function () {
-                "use strict";
-        
-        
-            }) ();
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Title Here</title>
+
+    <!----- STYLESHEET  STARTS  HERE ----->
+    <style src="jcss/external.css"></style>
+</head>
+<body>
+
+
+<!----- JAVIASCRIPT STARTS  HERE ------->
+<script>
+
+    (function () {
+        "use strict";
+        const isGoodDog = true;
+
+        /* TODO: Uncomment the line above then create a promise, haveTreat, that resolves with the string 'Good dog; have treat'
+            if the above constant is assigned to true and and rejects with the string 'Bad dog; no treat' if assigned false.
+         */
+            //     let haveTreat = new Promise ( (resolve, reject) => {
+            //         if (isGoodDog) {
+            //             resolve ( "Good dog; have a treat. Dad loves you so so much!!!" );
+            //             console.log ( "Good dog; have a treat" );
+            //         } else {
+            //             reject ( "Bad dog; no treat. Go to mama" );
+            //             console.log ( "Bad dog; no treat. Go to mama" );
+            //         }
+            //     });
+            //     console.log(haveTreat);
+            //
+            //     // TODO: handle the promise by console logging the result if resolved or rejected
+            //     haveTreat
+            //         .then ( (data) )
+            // =>
+            //     console.log ( data );
+            //
+            //
+            //     /* TODO: Refactor the promise above by wrapping the conditional logic of whether to resolve or reject
+            //         in a setTimeout so that the promise will only resolve or reject after five seconds.
+            //     */
+
+
+
+        // SECOND PART OF THE PROBLEM
+        /* TODO: using the code from the first mini-exercise, create a function, trainDog, that takes
+        // in a single boolean argument, isGoodDog, and returns a promise. This promise
+        // has an identical definition as the haveTreat promise from the previous mini exercise.
+        */
+        function trainDog(() => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (isGoodDog) {
+                        resolve("My Bear learns fast if you have treats");
+                    } else {
+                        reject("Sorry Bear, but you are going for a two week " +
+                            "training! I miss you.")
+                    }
+                }, 2000);
+            });
+        };
+
+
+
+
+        /* TODO: invoke the trainDog function passing in true as and argument
+            chain then and catch methods to handle the returned promise. Refactor
+            to pass in false to the function.
+         */
+
+        trainDog(true).then((data) =>{
+            console.log(data);
+        }).catch((data) => {
+            console.error(data);
+        });
+
+
+
+
+
+
+
+
+
+
+    }) ();
+    <!--<img src="../../../../../var/folders/1p/rzhq9sd948587sz89dlfqcjh0000gn/T/TemporaryItems/(A Document Being Saved By screencaptureui 97)/Screen Shot 2021-02-24 at 12.05.16 PM.png"-->
+    <!--     height="814" width="2386"/></script>-->
+</body>
 </html>

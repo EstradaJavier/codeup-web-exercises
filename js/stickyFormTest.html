@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Enter Title Here</title>
+
+        <!----- STYLESHEET  STARTS  HERE ----->
+        <style src="jcss/external.css"></style>
+    </head>
+    <body>
+
+    <form action="" name="myform">
+        <input type="text" name="name">
+        <div id="theName"></div>
+    </form>
+    <!----- JAVIASCRIPT STARTS  HERE ------->
+    <script>
+
+        (function() {
+            var form = document.getElementsByName('myform')[0];
+            if (localStorage['name'] !== undefined) {
+                var displayArea = document.getElementById('theName');
+                displayArea.textContent = localStorage['name'];
+            }
+            form.addEventListener('submit', function() {
+                var nameField = document.getElementsByName('name')[0];
+                localStorage['name'] = nameField.value;
+            }, false);
+        })();
+    </script>
+    </body>
+</html>
