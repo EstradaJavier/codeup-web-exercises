@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Words To Array Methods</title>
+    </head>
+    <body>
+    <script>
+        string_to_array = function (str) {
+            return str.trim().toLocaleUpperCase().split(" ").sort();
+        };
+        console.log(string_to_array("abstract continue for new switch assert default goto package " +
+            "synchronized boolean do if private this break double implements protected throw byte else " +
+            "import public throws case enum instanceof return transient catch extends int short try char " +
+            "final interface static void class finally long strictfp volatile const float native super while"));
+
+        for(let x = 0, let y = 0; i < string_to_array.length; x++) {
+                console.log([x] + [y]);
+        }
+    </script>
+    </body>
+</html>

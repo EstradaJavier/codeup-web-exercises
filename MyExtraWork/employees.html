@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h2>Employee Information Sheet</h2>
+        <table id="prodcts">
+            <table-head>
+                <tr>
+                    <th></th>
+                    <th>UserId</th>
+                    <th>JobTitle</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>EmployeeCode</th>
+                    <th>Region</th>
+                    <th>PhoneNumber</th>
+                    <th>emailAddress</th>
+                </tr>
+            </table-head>
+
+            <table-body id="insert-products">
+
+                <tr>
+<!--                    <td>userId</td>-->
+<!--                    <td>jobTitle</td>-->
+<!--                    <td>firstName</td>-->
+<!--                    <td>lastName</td>-->
+<!--                    <td>employeeCode</td>-->
+<!--                    <td>region</td>-->
+<!--                    <td>phoneNumber</td>-->
+<!--                    <td>emailAddress</td>-->
+
+<!--                    <td>javi</td>-->
+<!--                    <td>Delveloper</td>-->
+<!--                    <td>Javier</td>-->
+<!--                    <td>Estrada</td>-->
+<!--                    <td>E7</td>-->
+<!--                    <td>TX</td>-->
+<!--                    <td>1-210-379-7563</td>-->
+<!--                    <td>javafx25@gmail.com</td>-->
+                </tr>
+            </table-body>
+        </table>
+
+        <button id="refresh-btn">Refresh Table</button>
+<!--    jQuery CDN  ----------------------------------------------------->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+            <script>
+                "use strict"
+                $(document).ready(function() {
+                        console.log("Document Ready!");
+
+
+                    function refreshFromJson() {
+
+                        // this is what an Ajax request looks like:
+                        $.get("data/employees.json").done(function(employees) {
+                            $("#insert-products").html("");
+                            for(let i = 0; i < employees.length; i += 1) {
+                                console.log(buildToolHTML(employees[i]));
+                                $("#insert-products").append(buildToolHTML(employees[i]));
+                            }
+                        });
+                    };
+
+
+                        // create a function that will build up our table
+                        function buildToolHTML(employee) {
+                            let html = "";
+                            html += "<tr>\n" +
+                                "                    <td>" + employee.userId  + "</td>\n" +
+                                "                    <td>" + employee.jobTitle  + "</td>\n" +
+                                "                    <td>" + employee.firstName  + "</td>\n" +
+                                "                    <td>" + employee.lastName  + "</td>\n" +
+                                "                    <td>" + employee.employeeCode  + "</td>\n" +
+                                "                    <td>" + employee.region  + "</td>\n" +
+                                "                    <td>" + employee.phoneNumber  + "</td>\n" +
+                                "                    <td>" + employee.emailAddress  + "</td>\n" +
+                                "                </tr>";
+                            return html;
+                        }
+                        $("#refresh-btn").click(refreshFromJson);
+                    });
+            </script>
+        <script src="data/employees.json">
+    </body>
+</html>

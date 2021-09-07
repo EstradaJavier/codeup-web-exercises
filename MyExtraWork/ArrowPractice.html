@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Arrow Practice</title>
+    </head>
+    <body>
+        <script>
+            // this is a calleunction expression //
+            $(document).ready(function (dataFromJsonObject) {
+                "use strict"
+
+                //  NAMED FUNCTION WITH TWO PARAMETERS  //
+                function sum(a, b) {
+                    return a + b;
+                }
+
+                let sum2(a, b) => a + b;
+                // NAMED FUNCTION WITH ONE PARAMETER   //
+                function isPositive() {
+                    return number >= 0;
+                };
+
+
+
+                // NAMED FUNCTION WITH no PARAMETER   //
+                function randomNumber() {
+                    return Math.random;
+                };
+                 let randomNumber2 = () => Math.random;
+
+                // NAMED FUNCTION WITH ONE PARAMETER   //
+                document.addEventListener('click', function(){
+                    console.log("Click");
+                });
+                document.addEventListener('click', function() => console.log("Click"));
+
+            });
+
+
+
+        </script>
+    </body>
+</html>
