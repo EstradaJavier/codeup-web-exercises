@@ -1,0 +1,114 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Enter Title Here</title>
+
+        <!----- STYLESHEET  STARTS  HERE ----->
+<!--        <style src="jcss/external.css"></style>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            body {
+                margin: 20;
+                padding: 10;
+                background: aqua;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            p {
+                border: 1px solid white;
+                color: darkblue;
+                text-align: center;
+                text-shadow: 4px 4px 6px #222222;
+            }
+            .row {
+                float:left;
+                padding:5px 5px;
+                border:solid 1px #ccc;
+
+                margin: 0 10px;
+            }
+            .highlight {
+                background-color: #b4d455;
+                border:solid 5px red;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <p>10 Most Asked National Parks Questions </p>
+
+        <dl>
+            <hr>
+            <dt>1st FAQs about national parks.</dt>
+            <dd class="invisible">Where can I find a park map?.</dd>
+
+            <hr>
+            <dt>2nd FAQs about national parks.</dt>
+            <dd class="invisible">How do I obtain a park entrance pass?</dd>
+
+            <hr>
+            <dt>3rd FAQs about national parks.</dt>
+            <dd class="invisible">How do I make reservations for camping/lodging in national parks?</dd>
+
+            <hr>
+            <dt>4th FAQs about national parks.</dt>
+            <dd class="invisible">How do I reserve a tour in a park?</dd>
+
+            <hr>
+            <dt>5th FAQs about national parks.</dt>
+            <dd class="invisible">Can I bring my pet to a national park?</dd>
+
+            <hr>
+            <dt>6th FAQs about national parks./dt>
+            <dd class="invisible">Can I bring my service dog to a national park?</dd>
+
+            <hr>
+            <dt>7th FAQs about national parks.</dt>
+            <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+
+            <hr>
+            <dt>8th FAQs about national parks.</dt>
+            <dd class="invisible">What do I need to know about driving off road in national parks?</dd>
+
+            <hr>
+            <dt>9th FAQs about national parks.</dt>
+            <dd class="invisible">How do I apply for a job with the National Park Service?</dd>
+
+            <hr>
+            <dt>10th FAQs about national parks.</dt>
+            <dd class="invisible">How do I find out about contracting opportunities?</dd>
+            <hr>
+        </dl>
+
+
+        <p>This is a paragraph.</p>
+        <button>Toggle ALL (dd) </button>
+
+
+        <script>
+            "use strict"
+
+            $(document).ready(function(){
+                $("button").click(function(event){
+                    event.preventDefault();
+                    $(".invisible").toggle();
+                });
+
+                $("button").click(function(){
+                    $("p").toggle();
+                });
+
+                $("dd").click(function () {
+                    $("dd").removeClass("highlight");
+                    $(this).addClass("highlight");
+                });
+
+            });
+
+        </script>
+        <script src="js/jquery-3.5.1.js"></script>
+<!--        <script src="js/jquery_exercises.js"></script>-->
+    </body>
+</html>

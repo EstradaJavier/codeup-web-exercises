@@ -1,0 +1,77 @@
+/*stylesheet*/
+/*:root {*/
+/*    --main-bg: #E6ECF0;*/
+/*    --link-color: #3B94D9;*/
+/*    --main-link-color: #848487;*/
+/*    --light-bg: #FFF;*/
+/*    --separator-color: #DDD;*/
+/*}*/
+
+.fancy-header {
+    text-align: center;
+    color: purple; /* single line comment */
+    text-decoration: underline;
+    font-size: 4em;
+}
+
+* {
+    box-sizing: border-box;
+    /*background-color: cadetblue;*/
+}
+
+h2 {
+    color: darkblue;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+ol {
+    color: lime;
+    background-color: black;
+    opacity: .5;
+    padding: 10px;
+    list-style: upper-roman;
+    font-size: 4em;
+}
+
+ul {
+    list-style: upper-latin;
+    padding: 50px;
+    font-size: 40px;
+}
+
+body, html {
+    /*background-image: url("https://s3.envato.com/files/286683174/08.png");*/
+    background-color: burlywood;
+    height: 100%;
+    width: 99%;
+    font-family: Papyrus, rial, sans-serif;
+}
+
+a {
+    padding: 20px;
+    border: 20px;
+
+}
+p {
+    color: brown;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Ubuntu, Aerial, sans-serif;
+}
+
+a:link {    /* unvisited link */
+    color: darkblue;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+a:visited {    /* visited link */
+    color: #ff00ff;
+}
+a:hover {    /* mouse over link */
+    color: #00ff00;
+    border-bottom: none;
+}
+a:active {    /* active link */
+    color: #00ffff;
+}

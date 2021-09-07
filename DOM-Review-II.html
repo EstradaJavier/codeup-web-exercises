@@ -1,0 +1,147 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Enter Title Here</title>
+
+        <!----- STYLESHEET  STARTS  HERE ----->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div id="set-one-container">
+            <h2>List Item Selected: <span class="show-list-item-text"></span></h2>
+            <ul class="data-example-container">
+                <li class="data-example" data-value="1">One</li>
+                <li class="data-example" data-value="2">Two</li>
+                <li class="data-example" data-value="3">Three</li>
+                <li class="data-example" data-value="4">Four</li>
+            </ul>
+            <h2>Attribute Value: <span id="show-data-attr"></span></h2>
+            <h2>List Item Selected: <span class="show-list-item-text"></span></h2>
+        </div>
+
+        <hr/>
+
+        <div id="set-two-container">
+            <div id="hover-container">
+                <h2>Child 1</h2>
+                <h2>Child 2</h2>
+                <h2>Child 3</h2>
+                <p>Child 4</p>
+                <div>
+                    Child 5
+                    <p>
+                        Child... 6?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div id="set-three-container">
+            <ul>
+                <li class="background-color-change">pick me!</li>
+                <li class="background-color-change">pick me!</li>
+                <li class="background-color-change">pick me!</li>
+                <li class="background-color-change">pick me!</li>
+                <li class="background-color-change">pick me!</li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div id="set-four-container">
+
+            <input id="input">
+            <button id="concat-string">Concat</button>
+            <h3 id="output">Concat String:</h3>
+
+        </div>
+
+
+        <!----- JAVIASCRIPT STARTS  HERE ------->
+        <script>
+
+            $( "li.fade" ).hover(function() {
+                $( this ).fadeOut( 100 );
+                $( this ).fadeIn( 500 );
+            });
+
+
+
+            (function () {
+                "use strict";
+                // console.log("Before ready");
+                //         $( "li" ).hover(
+                //             function() {
+                //                 $( this ).append( $( "<span> ***</span>" ) );
+                //             }, function() {
+                //                 $( this ).find( "span" ).last().remove();
+                //             }
+                //         );
+
+
+
+
+
+                // ================= DOM Review, pt deux =================
+
+                /*
+                    TODO: When a list item inside of .data-example-container is clicked,
+                     -return its data-value attribute value to the element with an id of #show-data-attr */
+                //
+                // get the containers children
+                // apply the event to the children
+                // define a handler function to be applied to the children when the
+                // events fire
+
+                /* jQuery how to get the child elements of a parent. */
+
+                $(".data-example-container").children().click(function () {
+                    let dataAttr = $(this).attr("data-value");
+                    $("#show-data-attr").text(dataAttr);
+
+                });
+
+                    /*
+                    TODO: When a list item inside of .data-example-container is double clicked,
+                      -return its text value to the all elements with a class of .show-list-item-text */
+
+                $(".data-example-container").children().dblclick(function () {
+                    let textValue = $(this).attr("data-value");
+                    $(".show-list-item-text").text(textValue);
+
+                });
+
+
+                  /*
+                    TODO: When an immediate child element of the parent with an id of #hover-container is hovered
+                     -change the child's text to 'You are hovering here!' and
+                     -add a border to the child.
+                     -Be sure to reset the text and border upon hovering out */
+
+
+
+                /*
+                    TODO: When an element with the class of .background-color-change is clicked,
+                     -on each click, cycle between background-colors of 'red', 'blue', 'green', and back to the default
+                     -the colors should change in the above order
+                     -only affect one element at a time */
+
+
+
+
+                /*
+                    TODO: When a user enters a string (and only a string) into the input of id #input,
+                     -concatenate that string to what is already in the element with an id of #output
+                     -when the user double clicks the element with an id #output
+                     -the string resets to its original text
+
+                */
+
+
+            }) ();
+        </script>
+    </body>
+</html>

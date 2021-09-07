@@ -1,0 +1,23 @@
+/*stylesheet*/
+:root {
+    --main-bg: #E65638;
+    --link-color: #EB9D3A;
+    --main-link-color: #7CB06C;
+    --light-bg: #FFF;
+    --separator-color: #DDD;
+    --light-bg: #FFF;
+    --separator-color: #DDD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: var(--main-bg);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}

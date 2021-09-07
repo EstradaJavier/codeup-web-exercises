@@ -1,0 +1,61 @@
+/*stylesheet*/
+:root {
+    --main-bg: #E6ECF0;
+    --link-color: #3B94D9;
+    --main-link-color: #848487;
+    --light-bg: #FFF;
+    --separator-color: #DDD;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+
+.container {
+    width: 70%
+    margin: 20px auto;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message {
+    margin: 10px;
+    width: 90%;
+    border: 1px  solid lightgrey;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 20px;
+
+
+
+}
+/*<div class="message message-info">*/
+.message-info {
+    background-color: rgb(203, 223, 253);
+    color: blue;
+}
+/*<div class="message message-success">*/
+.message-success {
+    background-color: rgb(204, 244, 220);
+    color: green;
+}
+/*<div class="message message-warning">*/
+.message-warning {
+    background-color: rgb(252, 251, 205);
+    color: deepskyblue;
+}
+/*<div class="message message-error">*/
+.message-error {
+    background-color: rgb(252, 210, 215);
+    color: red;
+}

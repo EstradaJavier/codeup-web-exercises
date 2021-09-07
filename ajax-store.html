@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Store</title>
+    </head>
+    <body>
+
+        <h1>My Tool Store</h1>
+
+        <table id="products">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+<!--        this is the table that will hold all of our returned ajax data.-->
+            <tbody id="insertProducts">
+                <tr>
+                    <td>Hammer</td>
+                    <td>25</td>
+                    <td>tool</td>
+                    <td>20</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <button id="refresh-btn">Refresh Table</button>
+
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+        <script>
+            "use strict";
+            // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+            $(document).ready(function() {
+                // alert( 'jQuery  has finished loading!' );
+
+                function refreshFromJson() {
+                    $.get("data/inventory.json").done(function(tools) {
+                        $("#insertProducts").html("");
+                        for(let i = 0; i < tools.length; i += 1) {
+                            // console.log(buildToolHTML(tools[i]));
+                            $('#insertProducts').append(buildToolHTML(tools[i]));
+                        }
+                    });
+                }
+
+
+                    // TODO: Take the data from inventory.json and append it to the products table
+                    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+                    //             its contents and fields
+                    //
+                    // We can now take the data that we get back from our ajax request and pass
+                    // it to another function that is responsible to building out the HTML the table.
+                    function buildToolHTML(tool) {
+                        let html = "                <tr>\n" +
+                            "                    <td>" + tool.title + "</td>\n" +
+                            "                    <td>" + tool.quantity + "</td>\n" +
+                            "                    <td>" + tool.categories.join(",  ") + "</td>\n" +
+                            "                    <td>" + tool.price + "</td>\n" +
+                            "                </tr>";
+                            return html;
+                    }
+
+                    $("#refresh-btn").click(refreshFromJson);
+                    refreshFromJson();
+
+            });
+        </script>
+        <script src="js/ajax-store.js"></script>
+    </body>
+</html>

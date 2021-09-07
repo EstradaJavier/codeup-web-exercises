@@ -29,18 +29,18 @@ alert ( "Hi! Javier's for_loops.js Page." );
         // 199 is odd
         // ...
 
-        for (let i = 0; i < 10; i++) {
-             let mathRandomNumber = Math.floor(Math.random() * 180) + 20;
-                let i = 1;
-                while (i <= 1) {
-                    if (mathRandomNumber % 2 == 0) {
-                        console.log ( `${mathRandomNumber} EVEN` );
-                    } else {
-                        console.log ( `${mathRandomNumber} ODD` );
-                    }i++;
-
-                }i++;
-        };
+                    // for (let i = 0; i < 10; i++) {
+                    //      let mathRandomNumber = Math.floor(Math.random() * 180) + 20;
+                    //         let i = 1;
+                    //         while (i <= 1) {
+                    //             if (mathRandomNumber % 2 == 0) {
+                    //                 console.log ( `${mathRandomNumber} EVEN` );
+                    //             } else {
+                    //                 console.log ( `${mathRandomNumber} ODD` );
+                    //             }i++;
+                    //
+                    //         }i++;
+                    // };
 // console.log ( mathRandomNumber + " * " + i + " = " + (mathRandomNumber * i) );
         //
         // let mathRandomNumber = Math.floor(Math.random() * 180) + 20;
@@ -59,47 +59,55 @@ alert ( "Hi! Javier's for_loops.js Page." );
         // 7777777
         // 88888888
         // 999999999
+for(let i = 1; i <= 9; i++) {
+    console.log("Number: " + i);
+        for(let x = 1; x <= 9; x += 9) {
+            console.log("Number 2: " + x)
+        }
+}
+
+
 // console.log("Statrt of my foor loop 1 22 33 4444);
-                for( let i =0; i< 10; i++){
-                    // console.log("#########" + i);
-
-                    if (i === 1) {
-                        console.log("First number ###: " + i);
-                    } else if (i === 2) {
-                        console.log("First number ###: 2" + i);
-                    }else if (i === 3) {
-                        console.log("First number ###: 33" + i);
-                    } else if (i === 4) {
-                        console.log("First number ###: 444" + i);
-                    } else if (i === 5) {
-                        console.log("First number ###: 5555" + i);
-                    } else if (i === 6) {
-                        console.log("First number ###: 66666" + i);
-                    } else if (i === 7) {
-                        console.log("First number ###: 777777" + i);
-                    } else if (i === 8) {
-                        console.log("First number ###: 8888888" + i);
-                    } else if (i === 9) {
-                        console.log ( "First number ###: 99999999" + i );
-                    } else {
-                        console.log("All Done!")
-                    }
-                }
-
-                const arrayName = ["Apple", "Google", "Facebook"];
-
-                arrayName.forEach(loopIterator => {
-                	console.log(company);
-                });
-                const array1 = ['a', 'b', 'c', "d", [2, 3, 45, 7]];
-
-                array1.forEach ( element => console.log ( element ) );
-
-                > // "a"
-                > // "b"
-                > // "c"
-                > // "d"
-                > // Array [2, 3, 45, 7]
+            //                 for( let i =0; i< 10; i++){
+            //                     // console.log("#########" + i);
+            //
+            //                     if (i === 1) {
+            //                         console.log("First number ###: " + i);
+            //                     } else if (i === 2) {
+            //                         console.log("First number ###: 2" + i);
+            //                     }else if (i === 3) {
+            //                         console.log("First number ###: 33" + i);
+            //                     } else if (i === 4) {
+            //                         console.log("First number ###: 444" + i);
+            //                     } else if (i === 5) {
+            //                         console.log("First number ###: 5555" + i);
+            //                     } else if (i === 6) {
+            //                         console.log("First number ###: 66666" + i);
+            //                     } else if (i === 7) {
+            //                         console.log("First number ###: 777777" + i);
+            //                     } else if (i === 8) {
+            //                         console.log("First number ###: 8888888" + i);
+            //                     } else if (i === 9) {
+            //                         console.log ( "First number ###: 99999999" + i );
+            //                     } else {
+            //                         console.log("All Done!")
+            //                     }
+            //                 }
+            //
+            //                 const arrayName = ["Apple", "Google", "Facebook"];
+            //
+            //                 arrayName.forEach(loopIterator => {
+            //                 	console.log(company);
+            //                 });
+            //                 const array1 = ['a', 'b', 'c', "d", [2, 3, 45, 7]];
+            //
+            //                 array1.forEach ( element => console.log ( element ) );
+            //
+            //                 > // "a"
+            //                 > // "b"
+            //                 > // "c"
+            //                 > // "d"
+            //                 > // Array [2, 3, 45, 7]
 
 
 
@@ -156,12 +164,12 @@ alert ( "Hi! Javier's for_loops.js Page." );
         // 15
         // 10
         // 5
-            let x = 105;
-            while (x > 0) {
-                x = x - 5;
-                if (x === 5) continue;
-                console.log(`Decrementing from 100 to 0 by 5 each time! ==> ${x}`);
-            };
+                //     let x = 105;
+                //     while (x > 0) {
+                //         x = x - 5;
+                //         if (x === 5) continue;
+                //         console.log(`Decrementing from 100 to 0 by 5 each time! ==> ${x}`);
+                //     };
 
 
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mapbox Project</title>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+
+        <style src="css/geocode-style.js"></style>
+        <link rel="stylesheet" href="js/geocode-utils.js">
+
+        <style>
+
+        </style>
+
+    </head>
+    <body>
+        <div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid saddlebrown;'></div>
+        <script src="js/keys.js"></script>
+        <script src="js/geocode-utils.js"></script>
+
+
+        <script>
+            // var numberToStopAt = 5;
+
+            // mapboxgl.accessToken = mapboxToken;
+            // var map = new mapboxgl.Map({
+            //     container: 'mapbox-map',
+            //     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            //     center: [-98.49, 29.42],                     // starting position [lng, lat]
+            //     zoom: 9                                      // default zoom
+            // });
+
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.NavigationControl());
+
+            // create the popup
+            var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+                '<h3 id="irish-pub">Conroy's Irish Pub</h4>'
+            );
+
+            // Adding a marker to the map
+            var marker = new mapboxgl.Marker()
+                .setLngLat([29.72130, -98.66475 ])
+                .setPopup(popup)
+                .addTo(map);
+
+            geocode("9091 Fair Oaks Pkwy, Fair Oaks Ranch, TX 78015", mapboxToken).then(function (data) {
+                var codeupMarker = new mapboxgl.Marker()
+                    .setLngLat(data)
+                    .addTo(map);
+            });
+
+            reverseGeocode({lat: 29.8829, lng: -97.9443}, mapboxToken).then(function (data) {
+                console.log(data);
+            })
+
+        </script>
+    </body>
+</html>
