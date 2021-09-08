@@ -8,11 +8,30 @@
         <script>
             "use strict";
 
+            // ES6 Destructuring
+            const person = {
+                firstName: "Javier",
+                lastName:  "Estrada"
+            }
+            // Go from this
+            //              const firstName = person.firstName;
+            // To this, using the new state hook
+                            const {firstName} = person;
+
+
+            // Spread Operator. Useful for arrays and objects
             const names = ['Jvier', 'Alesha'];
             const otherNames = ['Lyn', 'Steven'];
 
             const allNames = [...names, ...otherNames];
             console.log(allNames);
+
+            // Template literal strings
+            const car = {
+                make: "BMW",
+                model: "540IM"
+            }
+                console.log(`${car.make}-${car.model}`);
 
         </script>
     </body>
